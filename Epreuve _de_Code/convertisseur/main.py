@@ -1,7 +1,6 @@
 #Mon Code :
 print("Bienvenue dans le convertisseur de pouces en centimètres et vice versa !")
-jeu = True
-while jeu == True :
+while True :
     choix = input("Souhaitez vous convertir de pouces vers cm (a), de centimètres vers pouces (b) ou sortir (c) ? ")
 
     def convertisseur (unite1, unite2, facteur_conversion) : 
@@ -15,4 +14,4 @@ while jeu == True :
         convertisseur ("centimètres", "pouces", 0.394)
     elif choix == "c" :
         print ("Au revoir !")
-        jeu = False
+        break
