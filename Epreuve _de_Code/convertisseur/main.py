@@ -6,7 +6,7 @@ while True :
     def convertisseur (unite1, unite2, facteur_conversion) : 
         valeur_str = (input (f"Rentrez votre valeur en {unite1} : "))
         try:
-            valeur_float = float(valeur_str) # La conversion en float est faite directement ici, pas besoin de convertir la valeur plu tôt sinon on aura une erreur"
+            valeur_float = float(valeur_str) # La conversion en float est faite directement ici, pas besoin de convertir la valeur plus tôt sinon on aura une erreur"
         except ValueError:
             print("ERREUR, veuillez utilisez une valeur numérique ")
             print ("(la décimale est un point et non une virgule)")
