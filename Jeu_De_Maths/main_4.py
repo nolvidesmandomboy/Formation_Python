@@ -1,6 +1,6 @@
 import random
 
-'''nb_min = 1
+nb_min = 1
 nb_max = 20
 nb_question = 5
 
@@ -45,5 +45,5 @@ elif nb_points == 0 :
 elif nb_points > moyenne :
     print ("Pas mal en vrai")
 elif nb_points < moyenne :
-    print ("Tu peut mieux faire mieux")'''
+    print ("Tu peut mieux faire mieux")
 
