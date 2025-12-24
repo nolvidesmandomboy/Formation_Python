@@ -44,3 +44,9 @@ if choix == "a" :
     min =d//60
     sec = sec = d-min*60
     affichage_du_temps_de_cuisson(min, sec, "oeuf à la coque")
+    
+elif choix == "b" :
+    d=360
+    min =d//60
+    sec = sec = d-min*60
+    affichage_du_temps_de_cuisson(min, sec, "oeuf mollet")
