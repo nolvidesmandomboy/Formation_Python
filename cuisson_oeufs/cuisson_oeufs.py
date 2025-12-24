@@ -23,11 +23,12 @@ def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
 
         if secondes> 0:
             secondes = secondes - 10
-        print(f"Durée restante = {minutes:02d}:{secondes:02d}\n", end="")
+        print(f"Durée restante = {minutes:02d}:{secondes:02d}", end="")
 
         for i in range(10):
             time.sleep(1)
             print(".", end="", flush=True)
+
         print("\n")
         
         if minutes == 0 and secondes == 0:
