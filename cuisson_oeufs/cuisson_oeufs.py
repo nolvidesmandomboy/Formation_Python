@@ -4,12 +4,17 @@ print ("Bienvenue dans ce minuteur du temps de cuisson !")
 
 while True :
     print ("Que souhaitez-vous cuire ?")
+    time.sleep(0.5)
     print ("a - des oeufs à la coque (3 minutes)")
+    time.sleep(0.5)
     print ("b - des oeufs mollets (6 minutes)")
+    time.sleep(0.5)
     print ("c - des oeufs durs (10 minutes)")
+    time.sleep(0.5)
     print ("d - Quitter")
 
-    choix = input ("votre choix ? (entre a, b, c et d) : ")
+    time.sleep(0.5)
+    choix = input ("Quel est votre choix ? (entre a, b, c et d) : ")
 
     def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
         print (f"vous avez selectionner un {nom_de_loeuf} ! Durée estimée : {minutes} minutes")
