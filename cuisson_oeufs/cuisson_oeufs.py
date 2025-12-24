@@ -1,7 +1,8 @@
 import time
 
+print ("Bienvenue dans ce minuteur du temps de cuisson !")
+
 while True :
-    print ("Bienvenue dans ce minuteur du temps de cuisson !")
     print ("Que souhaitez-vous cuire ?")
     print ("a - des oeufs à la coque (3 minutes)")
     print ("b - des oeufs mollets (6 minutes)")
