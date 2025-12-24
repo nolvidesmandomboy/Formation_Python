@@ -9,7 +9,7 @@ print ("c - des oeufs durs (10 minutes)")
 choix = input ("votre choix ? (entre a, b et c) : ")
 
 def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
-    print (f"vous avez selectionner un {nom_de_loeuf} !")
+    print (f"vous avez selectionner un {nom_de_loeuf} ! Durée estimée : {minutes} minutes")
     print ("cuisson en cours \n", end="")
     for i in range(10):
             time.sleep(1)
@@ -48,3 +48,9 @@ elif choix == "b" :
     min =d//60
     sec = sec = d-min*60
     affichage_du_temps_de_cuisson(min, sec, "oeuf mollet")
+
+elif choix == "c":
+    d=600
+    min =d//60
+    sec = sec = d-min*60
+    affichage_du_temps_de_cuisson(min, sec, "oeuf dur")
