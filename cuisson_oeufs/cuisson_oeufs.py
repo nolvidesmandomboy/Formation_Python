@@ -11,7 +11,12 @@ choix = input ("votre choix ? (entre a, b et c) : ")
 # mettre les min et le afficher temps qu'il reste
 
 def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
-    print ("cuisson en cours")
+    print (f"vous avez selectionner un {nom_de_loeuf} !")
+    print ("cuisson en cours", end="")
+    for i in range(10):
+            time.sleep(1)
+            print(".", end="", flush=True)
+    print("\n")
     while True:
         if secondes == 0:
             minutes = minutes-1
@@ -19,16 +24,18 @@ def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
 
         if secondes> 0:
             secondes = secondes - 10
-        print(f" Durée restante = {minutes:02d}:{secondes:02d}")
+        print(f"Durée restante = {minutes:02d}:{secondes:02d}", end="")
 
         for i in range(10):
             time.sleep(1)
             print(".", end="", flush=True)
         
+        print("\n")
+        
         if minutes == 0 and secondes == 0:
             break
     
-    print(f"fin de la cuisson !, votre {nom_de_loeuf} est prêt !")
+    print(f"fin de la cuisson !, votre {nom_de_loeuf} est prêt ! Bonne appétit ;)")
 
 d = 100
 min = d//60 # division entière (pas de virgules)
@@ -41,4 +48,4 @@ if choix == "a" :
     d=180
     min =d//60
     sec = sec = d-min*60
-    cuisson(min, sec, "oeuf à la coque")
+    affichage_du_temps_de_cuisson(min, sec, "oeuf à la coque")
