@@ -5,6 +5,7 @@ print ("Que souhaitez-vous cuire ?")
 print ("a - des oeufs à la coque (3 minutes)")
 print ("b - des oeufs mollets (6 minutes)")
 print ("c - des oeufs durs (10 minutes)")
+print ("d - Quitter")
 
 choix = input ("votre choix ? (entre a, b et c) : ")
 
@@ -57,3 +58,9 @@ elif choix == "c":
     min =d//60
     sec = sec = d-min*60
     affichage_du_temps_de_cuisson(min, sec, "oeuf dur")
+
+elif choix == "d":
+    print ("Au revoir ! à bientôt pour de nouvelles cuissons !")
+
+else :
+    print ("ERREUR, veuillez selectionner un des trois choix valides (a, b ou c)")
