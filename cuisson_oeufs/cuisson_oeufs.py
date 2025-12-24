@@ -8,8 +8,6 @@ print ("c - des oeufs durs (10 minutes)")
 
 choix = input ("votre choix ? (entre a, b et c) : ")
 
-# mettre les min et le afficher temps qu'il reste
-
 def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
     print (f"vous avez selectionner un {nom_de_loeuf} !")
     print ("cuisson en cours", end="")
@@ -40,9 +38,6 @@ def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
 d = 100
 min = d//60 # division entière (pas de virgules)
 sec = d-min*60
-
-    
-
 
 if choix == "a" :
     d=180
