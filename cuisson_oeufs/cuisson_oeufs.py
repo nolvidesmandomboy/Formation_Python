@@ -10,7 +10,7 @@ choix = input ("votre choix ? (entre a, b et c) : ")
 
 # mettre les min et le afficher temps qu'il reste
 
-def cuisson (minutes,secondes,nom_de_loeuf):
+def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
     print ("cuisson en cours")
     while True:
         if secondes == 0:
@@ -25,7 +25,6 @@ def cuisson (minutes,secondes,nom_de_loeuf):
             time.sleep(1)
             print(".", end="", flush=True)
         
-
         if minutes == 0 and secondes == 0:
             break
     
@@ -42,4 +41,4 @@ if choix == "a" :
     d=180
     min =d//60
     sec = sec = d-min*60
-    cuisson(min, sec, "des oeufs à la coque")
+    cuisson(min, sec, "oeuf à la coque")
