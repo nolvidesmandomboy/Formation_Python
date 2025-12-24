@@ -7,7 +7,7 @@ print ("b - des oeufs mollets (6 minutes)")
 print ("c - des oeufs durs (10 minutes)")
 print ("d - Quitter")
 
-choix = input ("votre choix ? (entre a, b et c) : ")
+choix = input ("votre choix ? (entre a, b, c et d) : ")
 
 def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
     print (f"vous avez selectionner un {nom_de_loeuf} ! Durée estimée : {minutes} minutes")
