@@ -10,11 +10,10 @@ choix = input ("votre choix ? (entre a, b et c) : ")
 
 def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
     print (f"vous avez selectionner un {nom_de_loeuf} !")
-    print ("cuisson en cours", end="")
+    print ("cuisson en cours \n", end="")
     for i in range(10):
             time.sleep(1)
             print(".", end="", flush=True)
-    print("\n")
 
     while True:
         if secondes == 0:
@@ -23,12 +22,11 @@ def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
 
         if secondes> 0:
             secondes = secondes - 10
-        print(f"Durée restante = {minutes:02d}:{secondes:02d}", end="")
+        print(f"Durée restante = {minutes:02d}:{secondes:02d}\n", end="")
 
         for i in range(10):
             time.sleep(1)
             print(".", end="", flush=True)
-        print("\n")
         
         if minutes == 0 and secondes == 0:
             break
