@@ -8,15 +8,31 @@ print ("c - des oeufs durs (10 minutes)")
 
 choix = input ("votre choix ? (entre a, b et c) : ")
 
-for i in range (5) : 
-    time.sleep(1)
-    print (".", end="", flush=True)
+# mettre les min et le afficher temps qu'il reste
 
-print("")
-print("fin du programme")
+def cuisson (minutes,secondes):
+    print ("cuisson en cours")
+    while True:
+        if secondes == 0:
+            minutes = minutes-1
+
+        for i in range(5):
+            time.sleep(1)
+            print(".", end="", flush=True)
+            secondes = secondes-10
+        print(f"{minutes:02d}:{secondes:02d}")
+    
+    print("fin du programme")
 
 d = 100
 min = d//60 # division entière (pas de virgules)
 sec = d-min*60
 
-print(f"{min:02d}")
+    
+
+
+if choix == "a" :
+    d=180
+    min =d//60
+    sec = sec = d-min*60
+    cuisson(min, sec)
