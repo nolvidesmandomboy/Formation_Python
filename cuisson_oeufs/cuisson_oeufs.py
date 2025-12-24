@@ -15,6 +15,7 @@ def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
             time.sleep(1)
             print(".", end="", flush=True)
     print("\n")
+
     while True:
         if secondes == 0:
             minutes = minutes-1
@@ -27,7 +28,6 @@ def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
         for i in range(10):
             time.sleep(1)
             print(".", end="", flush=True)
-        
         print("\n")
         
         if minutes == 0 and secondes == 0:
@@ -44,7 +44,7 @@ if choix == "a" :
     min =d//60
     sec = sec = d-min*60
     affichage_du_temps_de_cuisson(min, sec, "oeuf à la coque")
-    
+
 elif choix == "b" :
     d=360
     min =d//60
