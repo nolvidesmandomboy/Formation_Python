@@ -5,11 +5,11 @@ print ("Bienvenue dans ce minuteur du temps de cuisson !")
 while True :
     print ("Que souhaitez-vous cuire ?")
     time.sleep(0.5)
-    print ("a - des oeufs à la coque (3 minutes)")
+    print ("a - Des oeufs à la coque (3 minutes)")
     time.sleep(0.5)
-    print ("b - des oeufs mollets (6 minutes)")
+    print ("b - Des oeufs mollets (6 minutes)")
     time.sleep(0.5)
-    print ("c - des oeufs durs (10 minutes)")
+    print ("c - Des oeufs durs (10 minutes)")
     time.sleep(0.5)
     print ("d - Quitter")
 
@@ -17,8 +17,8 @@ while True :
     choix = input ("Quel est votre choix ? (entre a, b, c et d) : ")
 
     def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
-        print (f"vous avez selectionner un {nom_de_loeuf} ! Durée estimée : {minutes} minutes")
-        print ("cuisson en cours",  end="", flush=True)
+        print (f"Vous avez selectionner un {nom_de_loeuf} ! Durée estimée : {minutes} minutes")
+        print ("Cuisson en cours",  end="", flush=True)
         for i in range(10):
                 time.sleep(1)
                 print(".", end="", flush=True)
@@ -42,7 +42,7 @@ while True :
             if minutes == 0 and secondes == 0:
                 break
         
-        print(f"fin de la cuisson !, votre {nom_de_loeuf} est prêt ! Bonne appétit ;)\n")
+        print(f"Fin de la cuisson !, votre {nom_de_loeuf} est prêt ! Bonne appétit ;)\n")
 
     d = 100
     min = d//60 # division entière (pas de virgules)
