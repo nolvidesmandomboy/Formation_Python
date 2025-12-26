@@ -42,7 +42,7 @@ while True :
             if minutes == 0 and secondes == 0:
                 break
         
-        print(f"fin de la cuisson !, votre {nom_de_loeuf} est prêt ! Bonne appétit ;)")
+        print(f"fin de la cuisson !, votre {nom_de_loeuf} est prêt ! Bonne appétit ;)\n")
 
     d = 100
     min = d//60 # division entière (pas de virgules)
@@ -71,4 +71,4 @@ while True :
         break
 
     else :
-        print ("ERREUR, veuillez selectionner un des trois choix valides (a, b ou c)")
+        print ("ERREUR, veuillez selectionner un des trois choix valides (a, b ou c)\n")
