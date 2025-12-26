@@ -18,11 +18,11 @@ while True :
 
     def affichage_du_temps_de_cuisson (minutes,secondes,nom_de_loeuf):
         print (f"vous avez selectionner un {nom_de_loeuf} ! Durée estimée : {minutes} minutes")
-        print ("cuisson en cours", end="")
+        print ("cuisson en cours",  end="", flush=True)
         for i in range(10):
                 time.sleep(1)
                 print(".", end="", flush=True)
-        print("\n")
+        print()
 
         while True:
             if secondes == 0:
@@ -31,13 +31,13 @@ while True :
 
             if secondes> 0:
                 secondes = secondes - 10
-            print(f"Durée restante = {minutes:02d}:{secondes:02d}", end="")
+            print(f"Durée restante = {minutes:02d}:{secondes:02d}",  end="", flush=True)
 
             for i in range(10):
                 time.sleep(1)
                 print(".", end="", flush=True)
 
-            print("\n")
+            print()
             
             if minutes == 0 and secondes == 0:
                 break
