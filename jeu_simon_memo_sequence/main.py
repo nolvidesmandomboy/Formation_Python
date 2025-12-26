@@ -1,0 +1,1 @@
+print("Bonjour, bienvenue dans ce jeu de mémorisation !")
