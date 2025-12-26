@@ -39,7 +39,7 @@ while True :
 
             print()
             
-            if minutes == 0 and secondes == 0:
+            if minutes == 0 and secondes == 10:
                 break
         
         print(f"Fin de la cuisson !, votre {nom_de_loeuf} est prêt ! Bonne appétit ;)\n")
