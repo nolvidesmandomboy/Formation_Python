@@ -67,7 +67,7 @@ while True :
         affichage_du_temps_de_cuisson(min, sec, "oeuf dur")
 
     elif choix == "d":
-        print ("Au revoir ! à bientôt pour de nouvelles cuissons !")
+        print ("Au revoir ! à bientôt pour de nouvelles cuissons !\n")
         break
 
     else :
