@@ -53,4 +53,5 @@ while boucle_ == True :
             boucle_ = False
     else :
         print ("ERREUR, écrivez une réponse valide (oui ou non)")
+        print ()
         
