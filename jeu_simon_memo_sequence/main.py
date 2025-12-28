@@ -49,4 +49,6 @@ while True :
         if choix_sortie == "oui":
             print ("Au revoir !")
             break
+    else :
+        print ("ERREUR, écrivez une réponse valide (oui ou non)")
         
