@@ -11,11 +11,12 @@ def clear_screen():
 sequence_aleatoire = str (random.randint (0,9)) + str(random.randint(0,9)) + str(random.randint (0,9)) + str(random.randint (0,9))
 score = 0
 boucle = True
+boucle_ = True 
 
 print("Bonjour, bienvenue dans ce jeu de mémorisation !")
 time.sleep (1)
 
-while True :
+while boucle_ == True :
     choix_ = input ("Prêt(e) ? (répondre oui ou non) : ")
 
     if choix_ == "oui" :
@@ -42,13 +43,14 @@ while True :
                         print ("Au revoir, à bientôt !")
                         jeu = False
                         boucle = False
+                        boucle_ = False
                     else :
                         print ("ERREUR, écrivez oui ou non pour répondre")
     elif choix_ == "non":
         choix_sortie = input ("Souhaitez vous sortir ? ")
         if choix_sortie == "oui":
             print ("Au revoir !")
-            break
+            boucle_ = False
     else :
         print ("ERREUR, écrivez une réponse valide (oui ou non)")
         
