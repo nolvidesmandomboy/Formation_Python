@@ -25,10 +25,10 @@ while True :
             print(sequence_aleatoire)
             time.sleep (3)
             clear_screen()
-            reponse = input ("quelle est la séquence de chiffre ? ")
+            reponse = input ("Quelle est la séquence de chiffre ? ")
             if reponse == sequence_aleatoire :
                 score = score + 2
-                print (f"bien joué ! votre score est de {score}, retenez cette sequence")
+                print (f"Bien joué ! votre score est de {score}, retenez cette sequence")
                 sequence_aleatoire = sequence_aleatoire + str(random.randint(0,9))
             elif reponse != sequence_aleatoire :
                 print (f"Mauvaise réponse ! la bonne séquencee était : {sequence_aleatoire}")
@@ -45,7 +45,7 @@ while True :
                     else :
                         print ("ERREUR, écrivez oui ou non pour répondre")
     elif choix_ == "non":
-        choix_sortie = input ("souhaitez vous sortir ? ")
+        choix_sortie = input ("Souhaitez vous sortir ? ")
         if choix_sortie == "oui":
             print ("Au revoir !")
             break
