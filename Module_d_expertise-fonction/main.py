@@ -9,8 +9,13 @@ nom_ = input ("Votre nom : ") # <- retourne la valeur, c'est une fonction bloqua
 print ("votre nom est", nom_)'''
 
 #Définition de la fonction
-def afficher_info_personne ():
-    print()
+def afficher_info_personne (nom, age):
+    print(f"La personne est {nom}, son age est de {age} ans")
+    print(f"son prénom comporte {len(nom)} lettres")
+
+#Rajout de paramètres
+nom1 = input ("Quel est le nom de la personne 1 ?")
+age1 = input ("Quelle est l'âge de la personne 1 ?")
 
 #Appel de la fonction
-afficher_info_personne()
+afficher_info_personne(nom1,age1)
