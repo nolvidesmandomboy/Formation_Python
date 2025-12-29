@@ -8,5 +8,9 @@ print ("Je m'appelle", nom) # <- ici la fonction print a deux paramètres ("Je m
 nom_ = input ("Votre nom : ") # <- retourne la valeur, c'est une fonction bloquante 
 print ("votre nom est", nom_)'''
 
+#Définition de la fonction
 def afficher_info_personne ():
     print()
+
+#Appel de la fonction
+afficher_info_personne()
