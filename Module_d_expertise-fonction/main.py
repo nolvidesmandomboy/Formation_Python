@@ -21,4 +21,5 @@ age1 = input ("Quelle est l'âge de la personne 1 ?")
 afficher_info_personne(nom1,age1)
 
 #Return
-# -> Sert à sortir d'une fonction et à renvoyer une valeur, ce n'est cependant pas obligatoire
+''' -> Sert à sortir d'une fonction et à renvoyer une valeur, ce n'est cependant pas obligatoire
+ Il est conseillé de mettre des return dans la fonction lorsqu'il y a des conditions, par exemple, dans le if pour sortir du code directement lorsqu'on rentre dans la condition'''
