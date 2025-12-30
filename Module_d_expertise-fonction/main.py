@@ -19,3 +19,6 @@ age1 = input ("Quelle est l'âge de la personne 1 ?")
 
 #Appel de la fonction
 afficher_info_personne(nom1,age1)
+
+#Return
+# -> Sert à sortir d'une fonction et à renvoyer une valeur, ce n'est cependant pas obligatoire
