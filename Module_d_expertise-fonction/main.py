@@ -22,4 +22,8 @@ afficher_info_personne(nom1,age1)
 
 #Return
 ''' -> Sert à sortir d'une fonction et à renvoyer une valeur, ce n'est cependant pas obligatoire
- Il est conseillé de mettre des return dans la fonction lorsqu'il y a des conditions, par exemple, dans le if pour sortir du code directement lorsqu'on rentre dans la condition'''
+ - Il est conseillé de mettre des return dans la fonction lorsqu'il y a des conditions, par exemple, dans le if pour sortir du code directement lorsqu'on rentre dans la condition
+ 
+ - On ne peut pas mettre à la fois un return vide ou un return avec une valeur dans une fonction, ça peut créer des bugs ! 
+ 
+ - Les returns ne sont à utiliser que dans une fonction'''
