@@ -19,7 +19,7 @@ def gestion_des_erreurs (number,nb_min,nb_max):
         return False   
     if nb_max == int :
         return False
-    if nb_min or nb_max == "":
+    if nb_min == "" or nb_max == "":
         return False
     return True
     
