@@ -40,11 +40,13 @@ afficher_info_personne(nom1,age1)'''
 def afficher_info_personnes (numero, nom, age) :
     print (f"La personne {numero} est {nom}, son age est de {age} ans")
     print (f"son nom comporte {len(nom)} lettres")
+
+
     
 
 def recuperer_et_afficher_infos_personne(numero_personne):
-    nom_personne = input (f"Nom de la personne {numero} : ")
-    age_personne = input (f"Age de la personne {numero} : ")
+    nom_personne = input (f"Nom de la personne {numero_personne} : ")
+    age_personne = input (f"Age de la personne {numero_personne} : ")
     afficher_info_personnes (numero_personne,nom_personne,age_personne)
 
 nb_de_personnes = 3
