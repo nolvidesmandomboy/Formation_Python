@@ -22,14 +22,15 @@ def gestion_des_erreurs (number,nb_min,nb_max):
     if nb_min == "" or nb_max == "":
         return False
     return True
-    
+
+boucle = True    
 
 print ("Bienvenue dans cet exercie de table de multiplication")
 time.sleep(1)
 print ("Le but ici est de vous afficher les tables de multiplication du ou des nombres que vous rentrerez")
 time.sleep(2)
 
-while True :
+while boucle :
     Choix_numero = (input ("De quel numero souhaitez vous connaître la table de multiplication ? "))
     choix_min = input ("Vous pouvez aussi choisir d'où commence la table et où elle se termine (si vous n'en rentrez pas, la table sera par défaut de 1 à 10), choississez donc une valeur minimale (ou pas) ")
     choix_max = input ("Et une valeur maximale (ou pas) : ")
@@ -38,10 +39,14 @@ while True :
     else:
         afficher_table_de_multiplication (Choix_numero,choix_min,choix_max)
         choix_sortie = input (f"voici la table de multiplication du numéro {Choix_numero}, souhaitez-vous sortir (a) ou recommencer (b) ?")
-        if choix_sortie == "a":
-            break
-        elif choix_sortie == "b":
-            continue
-        else:
-            print("choisissez une réponse entre a et b")
+        while True: 
+            if choix_sortie == "a":
+                print ("A bientôt !")
+                boucle = False
+                break
+            elif choix_sortie == "b":
+                continue
+            else:
+                print("choisissez une réponse entre a et b")
+        
 
