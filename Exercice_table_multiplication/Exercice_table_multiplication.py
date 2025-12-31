@@ -1,3 +1,9 @@
+def afficher_table_de_multiplication (nombre,nb_tab_min=1,nb_tab_max=10):
+    print (f"Table de multiplication de {nombre}")
+    for i in range (nb_tab_min,nb_tab_max):
+        print (f"{i} x {nombre} = {i*nombre}")
+
+
 print ("Bienvenue dans cet exercie de table de multiplication")
 print ("Le but ici est de vous afficher les tables de multiplication du ou des nombres que vous rentrerez")
 Choix_numero = input ("De quel numero souhaitez vous connaître la table de multiplication ? ")
