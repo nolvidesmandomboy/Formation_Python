@@ -1,1 +1,1 @@
-print ("hello word")
+print ("Bienvenue dans cet exercie de table de multiplication")
