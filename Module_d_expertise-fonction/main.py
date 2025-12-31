@@ -30,11 +30,11 @@ afficher_info_personne(nom1,age1)'''
 
 #Exercice 
 
-def recuperer_et_afficher_infos_personne(numero):
+'''def recuperer_et_afficher_infos_personne(numero):
     nom = input (f"Nom de la personne {numero} : ")
     age = input (f"Age de la personne {numero} : ")
     print (f"La personne {numero} est {nom}, son age est de {age} ans")
-    print (f"son nom comporte {len(nom)} lettres")
+    print (f"son nom comporte {len(nom)} lettres")'''
 
 #Hierarchie
 def afficher_info_personnes (numero, nom, age) :
