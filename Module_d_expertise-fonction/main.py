@@ -37,6 +37,12 @@ afficher_info_personne(nom1,age1)'''
     print (f"son nom comporte {len(nom)} lettres")'''
 
 #Hierarchie
+
+def est_majeur (age) :
+    if age >= 18:
+        return True
+    return False
+
 def afficher_info_personnes (numero, nom, age) :
     print (f"La personne {numero} est {nom}, son age est de {age} ans")
     print (f"son nom comporte {len(nom)} lettres")
