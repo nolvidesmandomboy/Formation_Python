@@ -19,6 +19,8 @@ def gestion_des_erreurs (number,nb_min,nb_max):
         return False   
     if nb_max == int :
         return False
+    if nb_min or nb_max == "":
+        return False
     return True
     
 
@@ -28,7 +30,9 @@ print ("Le but ici est de vous afficher les tables de multiplication du ou des n
 time.sleep(2)
 Choix_numero = (input ("De quel numero souhaitez vous connaître la table de multiplication ? "))
 choix_min = input ("Vous pouvez aussi choisir d'où commence la table et où elle se termine (si vous n'en rentrez pas, la table sera par défaut de 1 à 10), choississez donc une valeur minimale (ou pas) ")
-choix_max = input ("Et une valeur maximale : ")
-gestion_des_erreurs (Choix_numero,choix_min,choix_max)
-#afficher_table_de_multiplication (Choix_numero,choix_min,choix_max)
+choix_max = input ("Et une valeur maximale (ou pas) : ")
+if gestion_des_erreurs (Choix_numero,choix_min,choix_max):
+    print ("Erreur, le programme ne peut pas fonctionner vous avez propablement rentré une valeur invalide dans au moins un des paramètres qui vous a été demander de remplir, vous devez écrire des valeurs numériques")
+else:
+    afficher_table_de_multiplication (Choix_numero,choix_min,choix_max)
 
