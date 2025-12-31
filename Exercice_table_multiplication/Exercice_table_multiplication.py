@@ -3,9 +3,9 @@ def afficher_table_de_multiplication (nombre, nb_tab_min=1, nb_tab_max=10):
     print (f"Table de multiplication de {nombre}")
     if nb_tab_min == "" :
         nb_tab_min=1
-        nb_tab_max=10
+        nb_tab_max=nb_tab_max
     elif  nb_tab_max == "":
-        nb_tab_min=1
+        nb_tab_min=nb_tab_min
         nb_tab_max=10
     for i in range (int(nb_tab_min),int(nb_tab_max)+1):
         print (f"{i} x {nombre} = {i*nombre}")
