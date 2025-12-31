@@ -46,6 +46,11 @@ def est_majeur (age) :
 def afficher_info_personnes (numero, nom, age) :
     print (f"La personne {numero} est {nom}, son age est de {age} ans")
     print (f"son nom comporte {len(nom)} lettres")
+    if est_majeur(age):
+        print (f"La personne {numero}, nommé {nom} est majeur")
+        return
+    if not est_majeur(age):
+        print (f"La personne {numero}, nommé {nom} est mineur")
 
 def recuperer_info_personnes (number) :
     nom_personne = input (f"Nom de la personne {number} : ")
