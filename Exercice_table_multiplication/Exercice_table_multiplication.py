@@ -11,6 +11,15 @@ def afficher_table_de_multiplication (nombre, nb_tab_min=1, nb_tab_max=10):
         print (f"{i} x {nombre} = {i*nombre}")
         time.sleep(0.5)
 
+def gestion_des_erreurs (number,nb_min,nb_max):
+    if number == int :
+        return False
+    if nb_min == int :
+        return False   
+    if nb_max == int :
+        return False
+    
+
 print ("Bienvenue dans cet exercie de table de multiplication")
 time.sleep(1)
 print ("Le but ici est de vous afficher les tables de multiplication du ou des nombres que vous rentrerez")
