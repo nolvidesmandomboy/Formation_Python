@@ -38,14 +38,15 @@ while boucle :
         print ("Erreur, le programme ne peut pas fonctionner vous avez propablement rentré une valeur invalide dans au moins un des paramètres qui vous a été demander de remplir, vous devez écrire des valeurs numériques")
     else:
         afficher_table_de_multiplication (Choix_numero,choix_min,choix_max)
-        choix_sortie = input (f"voici la table de multiplication du numéro {Choix_numero}, souhaitez-vous sortir (a) ou recommencer (b) ?")
-        while True: 
+        
+        while True:
+            choix_sortie = input (f"voici la table de multiplication de {Choix_numero}, souhaitez-vous sortir (a) ou recommencer (b) ? ") 
             if choix_sortie == "a":
                 print ("A bientôt !")
                 boucle = False
                 break
             elif choix_sortie == "b":
-                continue
+                break
             else:
                 print("choisissez une réponse entre a et b")
         
