@@ -44,10 +44,13 @@ def afficher_info_personnes (numero, nom, age) :
 def recuperer_info_personnes (number) :
     nom_personne = input (f"Nom de la personne {number} : ")
     age_personne = input (f"Age de la personne {number} : ")
+    return nom_personne # <- Permet de retourner les valeurs qui vont servir de paramètres dans la fonction afficher info personnes
     
 
 def recuperer_et_afficher_infos_personne(numero_personne):
+    recuperer_info_personnes (numero_personne)
     afficher_info_personnes (numero_personne,nom_personne,age_personne)
+    
 
 nb_de_personnes = 3
 
