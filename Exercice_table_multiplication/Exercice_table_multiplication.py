@@ -13,15 +13,29 @@ def afficher_table_de_multiplication (nombre, nb_tab_min=1, nb_tab_max=10):
         time.sleep(0.5)
 
 def gestion_des_erreurs (number,nb_min,nb_max):
-    if number == int :
-        return False
-    if nb_min == int :
-        return False   
-    if nb_max == int :
-        return False
-    if nb_min == "" or nb_max == "":
-        return False
-    return True
+    #Vient de l'IA Copilot
+    # Vérifier que number est un nombre
+    try:
+        int(number)
+    except ValueError:
+        return True  # erreur
+
+    # Vérifier nb_min si non vide
+    if nb_min != "":
+        try:
+            int(nb_min)
+        except ValueError:
+            return True  # erreur
+
+    # Vérifier nb_max si non vide
+    if nb_max != "":
+        try:
+            int(nb_max)
+        except ValueError:
+            return True  # erreur
+
+    return False  # aucune erreur
+
 
 boucle = True    
 
