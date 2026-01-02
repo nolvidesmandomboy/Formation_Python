@@ -1,0 +1,1 @@
+print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre correspondant aux propositions")
