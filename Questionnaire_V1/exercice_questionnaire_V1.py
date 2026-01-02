@@ -1,14 +1,15 @@
 print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre correspondant aux propositions")
 
-print ("Quelle est la capitale de la France ? ")
+def afficher_question (question,choix,reponse_correcte):
+    print (question)
 
-print ("a - Nairobi \nb - Paris \nc- New York \nd - Malabo")
+    print (f"{choix[0]}\n{choix[1]}\n{choix[2]}\n{choix[3]}\n")
 
-reponse = input ("Votre réponse : ")
+    reponse = input ("Votre réponse : ")
 
-if reponse == "a" : 
-    print ("Bien joué ! réponse correcte")
-elif reponse in ["b","c","d"]:
-    print ("réponse incorrecte")
-else :
-    print ("écrivez une réponse qui se trouve parmi les choix proposés svp")
+    if reponse == reponse_correcte : 
+        print ("Bien joué ! réponse correcte")
+    else:
+        print ("réponse incorrecte")
+
+afficher_question ("Quelle est la capitale de Paris ?",["a - Paris", "b - Nairobi", "c - Copenhague", "d - Madrid"], "a")
