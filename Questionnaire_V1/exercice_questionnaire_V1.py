@@ -1,4 +1,4 @@
-print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre correspondant aux propositions")
+print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre correspondant aux propositions\n")
 
 def afficher_question (question,choix,reponse_correcte):
     print (question)
