@@ -10,7 +10,7 @@ def afficher_question (question,choix,reponse_correcte):
     if reponse == reponse_correcte : 
         print ("Bien joué ! réponse correcte")
     else:
-        print ("réponse incorrecte")
+        print ("réponse incorrecte\n")
 
 afficher_question ("Quelle est la capitale de Paris ?",["a - Paris", "b - Nairobi", "c - Copenhague", "d - Madrid"], "a")
 
