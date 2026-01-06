@@ -8,7 +8,7 @@ def afficher_question (question,choix,reponse_correcte):
     reponse = input ("Votre réponse : ")
 
     if reponse == reponse_correcte : 
-        print ("Bien joué ! réponse correcte")
+        print ("Bien joué ! réponse correcte\n")
     else:
         print ("réponse incorrecte\n")
 
