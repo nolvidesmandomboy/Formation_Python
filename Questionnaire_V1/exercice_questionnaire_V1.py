@@ -1,6 +1,8 @@
 print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre correspondant aux propositions\n")
 
 def afficher_question (question,choix,reponse_correcte):
+    global score #permet d'integrer la variable du programme principale dans la fonction sans la rentrer en parametre 
+
     print (question)
 
     print (f"{choix[0]}\n{choix[1]}\n{choix[2]}\n{choix[3]}\n")
@@ -9,8 +11,11 @@ def afficher_question (question,choix,reponse_correcte):
 
     if reponse == reponse_correcte : 
         print ("Bien joué ! réponse correcte\n")
+        score =+ 1
     else:
         print ("réponse incorrecte\n")
+
+score = 0
 
 afficher_question ("Quelle est la capitale de Paris ?",["a - Paris", "b - Nairobi", "c - Copenhague", "d - Madrid"], "a")
 
@@ -23,3 +28,5 @@ afficher_question("Quelle planète est la plus proche du Soleil ?", ["a - Mercur
 afficher_question("Qui a peint la Joconde ?", ["a - Vincent Van Gogh", "b - Pablo Picasso", "c - Léonard de Vinci", "d - Claude Monet"], "c")
 
 afficher_question("Quel langage est principalement utilisé pour le développement web côté serveur ?", ["a - HTML", "b - CSS", "c - Python", "d - JavaScript"], "c")
+
+print (f"votre score est de {score}")
