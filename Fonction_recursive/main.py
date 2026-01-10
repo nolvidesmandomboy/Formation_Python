@@ -10,10 +10,26 @@ def a (n,limit):
 a(2,100000)
 
 #On peut attribuer une fonction à une variable :
-'''
-def ma_fonction()
+
+def ma_fonction():
     print("Ubigum")
 
-a = "toto"
-b = ma_fonction <-- ici la fonction sans parenthèse permet de définir la variable B comme étant la fonction, on pourra donc directement appelé la fonction avec la variable b.
-'''
+c = "toto"
+d = ma_fonction #<-- ici la fonction sans parenthèse permet de définir la variable B comme étant la fonction, on pourra donc directement appelé la fonction avec la variable b.
+
+
+#callbacks 
+def mult_callback (a,b):
+    return a*b
+
+def add_callback (a,b):
+    return a+b
+
+# Les calls backs permettent de creer d'autres fonctions qu'on rajoutera dans les paramètres de la fonction principale
+
+def afficher_table (n,operateur_str,operation_callback):
+    for i in range (1,10):
+        print (f"{i} {operateur_str} {n} = {operation_callback(i,n)}")
+
+afficher_table (9,"x",mult_callback)
+d()
