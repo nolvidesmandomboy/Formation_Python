@@ -8,3 +8,12 @@ def a (n,limit):
     a(n*n,limit)
 
 a(2,100000)
+
+#On peut attribuer une fonction à une variable :
+'''
+def ma_fonction()
+    print("Ubigum")
+
+a = "toto"
+b = ma_fonction <-- ici la fonction sans parenthèse permet de définir la variable B comme étant la fonction, on pourra donc directement appelé la fonction avec la variable b.
+'''
