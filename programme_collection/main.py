@@ -9,4 +9,4 @@ for i in range (0,len(personne)):
     print (personne[i])
 
 for i in personne:
-    print (i)
+    print (i) #<- ici i va directement prendre les éléments de personnes
