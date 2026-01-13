@@ -7,3 +7,6 @@ print (personne[3]) # <- on appelle les éléments du tuple et de la liste de la
 
 for i in range (0,len(personne)):
     print (personne[i])
+
+for i in personne:
+    print (i)
