@@ -10,3 +10,9 @@ for i in range (0,len(personne)):
 
 for i in personne:
     print (i) #<- ici i va directement prendre les éléments de personnes
+
+personne_ = ["Carlos", "Victoria", "Alison", "Samira"]
+
+del personne_ [2] #<-- Permet de supprimer des éléments d'une liste
+
+print (personne_)
