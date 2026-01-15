@@ -62,3 +62,13 @@ for i in personne[::2]: #le step ici permet de sauter n élément. Par défaut c
     print (i)'''
 
 #Exercice : Demander le nom des personnes 
+
+nom = []
+nom_ = True
+
+while nom_ == True:
+    reponse = input ("Quelle est le nom de la personne ? Réponse : ") 
+    nom.append (reponse)
+    if reponse == "":
+        break
+
