@@ -49,3 +49,9 @@ def afficher_infos(nom,age,taff,taille):
     print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
 
 afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement'''
+
+#Les slices 
+personne = ("Mélanie", "Victor", "Thomas", "Nicolas") 
+
+for i in personne:
+    print (i)
