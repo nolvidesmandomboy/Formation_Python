@@ -68,7 +68,7 @@ nom_ = True
 
 def afficher_nom_personnes (liste_de_noms) :
     for i in liste_de_noms :
-        print(f"Le nom de la personne {liste_de_noms.index(i+1)} : {i}") #Le .index ici permet d'avoir accès à la position de l'élément dans la liste
+        print(f"Le nom de la personne {liste_de_noms.index(str(i+1))} : {i}") #Le .index ici permet d'avoir accès à la position de l'élément dans la liste
 
 while nom_ == True:
     reponse = input ("Quelle est le nom de la personne ? Réponse : ") 
