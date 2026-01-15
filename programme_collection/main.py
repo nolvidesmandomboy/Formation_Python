@@ -58,5 +58,5 @@ for i in personne[0:3]: #<- le slice permet de choisir les éléments du tuple d
 
 print()
 
-for i in personne[::2]: #le step ici permet de sauter n élément. Par défaut c'est 1, et à chaque fois qu'on rajoute 1 on saute d'1 pas en plus
+for i in personne[::2]: #le step ici permet de sauter n élément. Par défaut c'est 1, et à chaque fois qu'on rajoute 1 on saute d'1 pas en plus, bien sur ça s'applique aussi aux chaînes de caractères
     print (i)
