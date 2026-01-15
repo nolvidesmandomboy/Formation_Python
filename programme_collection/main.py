@@ -51,7 +51,7 @@ def afficher_infos(nom,age,taff,taille):
 afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement'''
 
 #Les slices 
-personne = ("Mélanie", "Victor", "Thomas", "Nicolas") 
+personne = ("Mélanie", "Victor", "Thomas", "Nicolas","Jamy","Anais","Sophia","Bebeto") 
 
-for i in personne:
+for i in personne[0:3]:
     print (i)
