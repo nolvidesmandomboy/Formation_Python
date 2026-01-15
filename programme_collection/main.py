@@ -15,7 +15,7 @@ personne_ = ["Carlos", "Victoria", "Alison", "Samira"]
 
 del personne_ [2] #<-- Permet de supprimer des éléments d'une liste
 
-print (personne_)'''
+print (personne_)
 
 def modifier_valeur(b):
     b = 10
@@ -29,5 +29,5 @@ print(a)
 modifier_valeur(a)
 print (a) #<- la valeur reste la même ici vu que la variable qui a changé est locale à la fonction donc tant que je ne la printe pas directement dans la fonction, elle restera la même 
 modifier_valeur_liste(liste)
-print (liste)#<- la liste est un conteneur, donc contrairement aux variables lorsqu'on la modifie dans la fonction, elle est aussi modifiée à l'extérieur
+print (liste)#<- la liste est un conteneur, donc contrairement aux variables lorsqu'on la modifie dans la fonction, elle est aussi modifiée à l'extérieur'''
 
