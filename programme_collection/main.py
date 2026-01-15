@@ -20,7 +20,14 @@ print (personne_)'''
 def modifier_valeur(b):
     b = 10
 
+def modifier_valeur_liste(c):
+    c[9]=12
+
 a = 5
+liste = [1,2,3,4,5,6,7,8,9,10]
 print(a)
 modifier_valeur(a)
-print (a)
+print (a) #<- la valeur reste la même ici vu que la variable qui a changé est locale à la fonction donc tant que je ne la printe pas directement dans la fonction, elle restera la même 
+modifier_valeur_liste(liste)
+print (liste)
+
