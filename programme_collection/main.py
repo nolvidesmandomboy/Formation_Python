@@ -36,8 +36,8 @@ def obtenir_infos ():
 
 infos = obtenir_infos()
 
-print = (f"Prénom : {str(infos[0])}")
-print = (f"Age : {str(infos[1])}")
-print = (f"Activité : {str(infos[2])}")
-print = (f"Taille: {str(infos[3])}")
+print (f"Prénom : {str(infos[0])}")
+print (f"Age : {str(infos[1])}")
+print (f"Activité : {str(infos[2])}")
+print (f"Taille: {str(infos[3])}")
 
