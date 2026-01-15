@@ -16,3 +16,11 @@ personne_ = ["Carlos", "Victoria", "Alison", "Samira"]
 del personne_ [2] #<-- Permet de supprimer des éléments d'une liste
 
 print (personne_)'''
+
+def modifier_valeur(b):
+    b = 10
+
+a = 5
+print(a)
+modifier_valeur(a)
+print (a)
