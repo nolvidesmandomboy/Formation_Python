@@ -41,3 +41,7 @@ infos = obtenir_infos()
 #print (f"Activité : {str(infos[2])}")
 #print (f"Taille : {str(infos[3])} m")
 
+nom,age,taff,taille = obtenir_infos() #<- on peut directement affecter des variables aux valeurs retournés dans la fonction
+
+print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
+
