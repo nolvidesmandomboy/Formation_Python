@@ -73,6 +73,7 @@ while True:
     reponse = input ("Quelle est le nom de la personne ? Réponse : ") 
     nom.append (reponse)
     if reponse == "":
+        nom.remove("")
         break
 
 afficher_nom_personnes (nom)
