@@ -66,6 +66,7 @@ for i in personne[::2]: #le step ici permet de sauter n élément. Par défaut c
 nom = []
 
 def afficher_nom_personnes (liste_de_noms) :
+    liste_de_noms.sort()
     for i in liste_de_noms :
         print(f"Le nom de la personne {liste_de_noms.index(str(i))+1} : {i}") #Le .index ici permet d'avoir accès à la position de l'élément dans la liste
 
