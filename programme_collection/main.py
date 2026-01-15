@@ -31,3 +31,13 @@ print (a) #<- la valeur reste la même ici vu que la variable qui a changé est 
 modifier_valeur_liste(liste)
 print (liste)#<- la liste est un conteneur, donc contrairement aux variables lorsqu'on la modifie dans la fonction, elle est aussi modifiée à l'extérieur'''
 
+def obtenir_infos ():
+    return "Melanie",19,"Etudiante",1.75
+
+infos = obtenir_infos()
+
+print = (f"Prénom : {str(infos[0])}")
+print = (f"Age : {str(infos[1])}")
+print = (f"Activité : {str(infos[2])}")
+print = (f"Taille: {str(infos[3])}")
+
