@@ -79,3 +79,5 @@ while True:
 
 afficher_nom_personnes (nom)'''
 
+#Exercice 2 : Algorithme "Valeur la plus petite"
+
