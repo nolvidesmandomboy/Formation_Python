@@ -53,5 +53,10 @@ afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune d
 #Les slices 
 personne = ("Mélanie", "Victor", "Thomas", "Nicolas","Jamy","Anais","Sophia","Bebeto") 
 
-for i in personne[0:3]: #<- le slice permet de choisir les éléments du tuple de 0 à n
+for i in personne[0:3]: #<- le slice permet de choisir les éléments du tuple de 0 à n = [start:stop:step]
+    print (i)
+
+print()
+
+for i in personne[::2]: #le step ici permet de passer les éléments de deux en deux 
     print (i)
