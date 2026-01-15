@@ -29,7 +29,7 @@ print(a)
 modifier_valeur(a)
 print (a) #<- la valeur reste la même ici vu que la variable qui a changé est locale à la fonction donc tant que je ne la printe pas directement dans la fonction, elle restera la même 
 modifier_valeur_liste(liste)
-print (liste)#<- la liste est un conteneur, donc contrairement aux variables lorsqu'on la modifie dans la fonction, elle est aussi modifiée à l'extérieur'''
+print (liste)#<- la liste est un conteneur, donc contrairement aux variables lorsqu'on la modifie dans la fonction, elle est aussi modifiée à l'extérieur
 
 def obtenir_infos ():
     return "Melanie",19,"Etudiante",1.75
@@ -48,4 +48,4 @@ infos = obtenir_infos()
 def afficher_infos(nom,age,taff,taille):
     print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
 
-afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement
+afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement'''
