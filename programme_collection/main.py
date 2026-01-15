@@ -48,7 +48,7 @@ infos = obtenir_infos()
 def afficher_infos(nom,age,taff,taille):
     print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
 
-afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement'''
+afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement
 
 #Les slices 
 personne = ("Mélanie", "Victor", "Thomas", "Nicolas","Jamy","Anais","Sophia","Bebeto") 
@@ -59,4 +59,6 @@ for i in personne[0:3]: #<- le slice permet de choisir les éléments du tuple d
 print()
 
 for i in personne[::2]: #le step ici permet de sauter n élément. Par défaut c'est 1, et à chaque fois qu'on rajoute 1 on saute d'1 pas en plus, bien sur ça s'applique aussi aux chaînes de caractères
-    print (i)
+    print (i)'''
+
+#Exercice : Demander le nom des personnes 
