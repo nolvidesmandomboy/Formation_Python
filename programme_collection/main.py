@@ -76,4 +76,5 @@ while nom_ == True:
     if reponse == "":
         break
 
+afficher_nom_personnes (nom)
 
