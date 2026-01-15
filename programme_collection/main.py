@@ -66,9 +66,14 @@ for i in personne[::2]: #le step ici permet de sauter n élément. Par défaut c
 nom = []
 nom_ = True
 
+def afficher_nom_personnes (liste_de_noms) :
+    for i in liste_de_noms :
+        print(f"Le nom de la personne {len(liste_de_noms)+1} : {i}")
+
 while nom_ == True:
     reponse = input ("Quelle est le nom de la personne ? Réponse : ") 
     nom.append (reponse)
     if reponse == "":
         break
+
 
