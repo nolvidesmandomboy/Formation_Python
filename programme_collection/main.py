@@ -41,7 +41,11 @@ infos = obtenir_infos()
 #print (f"Activité : {str(infos[2])}")
 #print (f"Taille : {str(infos[3])} m")
 
-nom,age,taff,taille = obtenir_infos() #<- on peut directement affecter des variables aux valeurs retournés dans la fonction
+#nom,age,taff,taille = obtenir_infos() #<- on peut directement affecter des variables aux valeurs retournés dans la fonction
 
-print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
+#print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
 
+def afficher_infos(nom,age,taff,taille):
+    print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
+
+afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement
