@@ -91,6 +91,13 @@ distance_minimal = distance_chauffeur[0] #On considère toujours le premier él�
 for distance in distance_chauffeur :
     if distance < distance_minimal:
         distance_minimal = distance
+
+index_min = 0
+for i in range (len(distance_chauffeur)) :
+    distance = distance_chauffeur [i]
+    if distance < distance_minimal:
+        distance_minimal = distance
+        index_min = i
     
 print (f"distance minimale : {distance_minimal} km")
 print (f"index de la distance minimale : {distance_chauffeur.index(0.15)}")
