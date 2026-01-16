@@ -89,5 +89,5 @@ for distance in distance_chauffeur :
     if distance < distance_minimal:
         distance_minimal = distance
     
-print (f"distance minimale : {distance_minimal}")
+print (f"distance minimale : {distance_minimal} km")
 
