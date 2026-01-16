@@ -93,4 +93,4 @@ for distance in distance_chauffeur :
         distance_minimal = distance
     
 print (f"distance minimale : {distance_minimal} km")
-
+print (f"index de la distance minimale : {distance_chauffeur.index(0.15)}")
