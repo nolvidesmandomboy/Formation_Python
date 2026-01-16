@@ -81,3 +81,13 @@ afficher_nom_personnes (nom)'''
 
 #Exercice 2 : Algorithme "Valeur la plus petite"
 
+distance_chauffeur = [12.5, 8.3, 15.0, 4.7, 22.1, 9.8, 13.4, 18.6, 7.2, 5.9, 11.0, 14.3, 19.7, 3.5, 27.8, 16.4, 20.2, 6.1, 10.5, 23.9, 0.3, 0.7, 1.2, 0.9, 0.4, 0.15, 0.8]
+
+distance_minimal = distance_chauffeur[0] #On considère toujours le premier élément de la liste comme le plus petit et ensuite avec une boucle for on comparera avec les autres pour voir qui est plus petit 
+
+for distance in distance_chauffeur :
+    if distance < distance_minimal:
+        distance_minimal = distance
+    
+    print (f"distance minimale : {distance_minimal}")
+
