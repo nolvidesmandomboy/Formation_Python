@@ -93,13 +93,16 @@ for distance in distance_chauffeur :
         distance_minimal = distance
 
 index_min = 0
+nom_chauffeur_min = 0
 distance_minimal = distance_chauffeur[0]
 for i in range (len(distance_chauffeur)) :
     distance = distance_chauffeur [i]
     if distance < distance_minimal:
         distance_minimal = distance
         index_min = i
+        nom_chauffeur_min = noms_chauffeurs[i]
     
 print (f"distance minimale : {distance_minimal} km")
 print (f"index de la distance minimale : {distance_chauffeur.index(0.15)}")
 print (f"index de la distance minimale : {index_min}")
+print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")
