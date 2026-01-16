@@ -101,3 +101,4 @@ for i in range (len(distance_chauffeur)) :
     
 print (f"distance minimale : {distance_minimal} km")
 print (f"index de la distance minimale : {distance_chauffeur.index(0.15)}")
+print (f"index de la distance minimale : {index_min}")
