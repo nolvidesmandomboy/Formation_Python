@@ -93,6 +93,7 @@ for distance in distance_chauffeur :
         distance_minimal = distance
 
 index_min = 0
+distance_minimal = distance_chauffeur[0]
 for i in range (len(distance_chauffeur)) :
     distance = distance_chauffeur [i]
     if distance < distance_minimal:
