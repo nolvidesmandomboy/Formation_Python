@@ -1,1 +1,1 @@
-pizza = ("")
+pizza = ("margherita", "végétarienne", "4 fromages","hawai")
