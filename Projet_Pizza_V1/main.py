@@ -1,7 +1,6 @@
 def ajouter_pizza_utilisateur (collection):
     rajout = input ("Pizza à rajouter : ")
     collection.append(rajout)
-    return collection
 
 
 def afficher_les_pizzas (liste_de_pizza):
@@ -18,7 +17,7 @@ def afficher_les_pizzas (liste_de_pizza):
 pizza = ["Margherita", "Végétarienne", "4 fromages","Hawai"]
 vide = ()
 
-pizza = ajouter_pizza_utilisateur (pizza)
+ajouter_pizza_utilisateur (pizza)
 afficher_les_pizzas (pizza)
 
 
