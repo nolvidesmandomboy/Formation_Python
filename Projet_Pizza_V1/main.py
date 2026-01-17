@@ -1,7 +1,14 @@
+def pizza_existe (collection,rajout):
+    if rajout.lower() in collection : #<- le lower ici permet de mettre tout la chaîne de caractère en miniscule et du coup de quand même détecter si un élément est dans la liste même si il est en majuscule
+        return True
+
 def ajouter_pizza_utilisateur (collection):
     rajout = input ("Pizza à rajouter : ")
+    if pizza_existe (collection,rajout):
+        print ("Cette pizza existe déjà")
+        print()
+        return
     collection.append(rajout)
-
 
 def afficher_les_pizzas (liste_de_pizza):
     print(f"----------------Liste des pizzas---------------({len(liste_de_pizza)})")
@@ -14,7 +21,7 @@ def afficher_les_pizzas (liste_de_pizza):
     print (f"Première pizza : {liste_de_pizza[0]} ")
     print (f"Derinère pizza : {liste_de_pizza[-1]} ")
 
-pizza = ["Margherita", "Végétarienne", "4 fromages","Hawai"]
+pizza = ["margherita", "végétarienne", "4 fromages","hawai"]
 vide = ()
 
 ajouter_pizza_utilisateur (pizza)
