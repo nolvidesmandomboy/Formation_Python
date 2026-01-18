@@ -7,3 +7,7 @@ print(personne)
 personne["nom"] = "Claire" #<- on peut directement remplacer une valeur d'un dictionnaire
 
 print (personne)
+
+personne ["poste"] = "Développeur.se" #<- on peut rajouter une clé directement
+
+print (personne)
