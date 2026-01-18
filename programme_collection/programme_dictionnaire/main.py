@@ -11,3 +11,6 @@ print (personne)
 personne ["poste"] = "Développeur.se" #<- on peut rajouter une clé directement
 
 print (personne)
+
+for i in personne :
+    print(f"Clef : {i}, Valeur : {personne[i]}") #<- les dictionnaires étant aussi des collections, on peut les boucler
