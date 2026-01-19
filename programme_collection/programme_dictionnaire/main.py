@@ -26,6 +26,13 @@ personnes = [
     ("Michel",25,2.05)
 ]
 
+personnes_dict = {
+    "Mélanie" : (19,1.75),
+    "Paul" : (45,1.85),
+    "Jules" : (13,1.55),
+    "Michel" : (25,2.05)
+}
+
 def obtenir_information (nom,liste_de_noms):
     for i in liste_de_noms :
         if i[0] == nom:
@@ -33,4 +40,5 @@ def obtenir_information (nom,liste_de_noms):
     return None
 
 infos = obtenir_information ("Jules",personnes)
-print (infos)
+#print (infos)
+print (personnes_dict["Paul"])
