@@ -28,7 +28,9 @@ personnes = [
 
 def obtenir_information (nom,liste_de_noms):
     for i in liste_de_noms :
-        if nom in liste_de_noms :
-            print (liste_de_noms[nom])
+        if i[0] == nom:
+            return i
+    return None
 
-obtenir_information ("Jules",personnes)
+infos = obtenir_information ("Jules",personnes)
+print (infos)
