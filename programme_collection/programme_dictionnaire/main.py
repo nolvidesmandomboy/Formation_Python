@@ -1,4 +1,4 @@
-print("Hello word")
+#print("Hello word")
 
 #------Partie 1-----------
 
@@ -18,3 +18,17 @@ for i in personne :
     print(f"Clef : {i}, Valeur : {personne[i]}") #<- les dictionnaires étant aussi des collections, on peut les boucler'''
 
 #------Partie 2-----------
+
+personnes = [
+    ("Mélanie",19,1.75),
+    ("Paul",45,1.85),
+    ("Jules",13,1.55),
+    ("Michel",25,2.05)
+]
+
+def obtenir_information (nom,liste_de_noms):
+    for i in liste_de_noms :
+        if nom in liste_de_noms :
+            print (liste_de_noms[nom])
+
+obtenir_information ("Jules",personnes)
