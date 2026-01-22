@@ -13,9 +13,10 @@ def afficher_question (question):
     for choix  in range(0, len(choix_reponses)) :
         print (f"{choix + 1}) {choix_reponses [choix]}")
 
-    reponse_utilisateur = input (f"Votre réponse (entre 1 et {len(choix_reponses)}):")
+    reponse_utilisateur_str = input (f"Votre réponse (entre 1 et {len(choix_reponses)}):")
+    reponse_utilisateur_int = int(reponse_utilisateur_str)
 
-    if reponse_utilisateur.lower() == reponse_correcte.lower() : 
+    if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower() or reponse_utilisateur_str.lower() == reponse_correcte.lower(): 
         score = score + 1
         print ("Bien joué ! réponse correcte\n")
     else:
