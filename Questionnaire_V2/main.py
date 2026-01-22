@@ -3,9 +3,9 @@ print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre
 def afficher_question (question):
     global score #permet d'integrer la variable du programme principale dans la fonction sans la rentrer en parametre 
 
-    titre_question =question[0]
-    choix_reponses=question[1]
-    reponse_correcte=question[2]
+    titre_question = question[0]
+    choix_reponses = question[1]
+    reponse_correcte = question[2]
 
     print (titre_question)
     print (f"{choix_reponses[0]}\n{choix_reponses[1]}\n{choix_reponses[2]}\n{choix_reponses[3]}")
