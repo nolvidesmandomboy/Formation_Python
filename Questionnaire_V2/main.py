@@ -22,37 +22,37 @@ score = 0
 
 question1 = (
     "Quelle est la capitale de Paris ?",
-    ("a - Paris", "b - Nairobi", "c - Copenhague", "d - Madrid"),
+    ("Paris", "Nairobi", "Copenhague", "Madrid"),
     "Paris"
 )
 
 question2 = (
     "Comment s'appelle le président actuel de la France ?",
-    ("a - Paul Biya", "b - Theodoro Obiang Nguema Mbasogo", "c - Macron", "d - Trump"),
+    ("Paul Biya", "Theodoro Obiang Nguema Mbasogo", "Macron", "Trump"),
     "Macron"
 )
 
 question3 = (
     "Quel manga connu dans le monde entier a été créé par Masashi Kishimoto ?",
-    ("a - Berserk", "b - Naruto", "c - My Hero Academia", "d - DBZ"),
+    ("Berserk", "Naruto", "My Hero Academia", "DBZ"),
     "Naruto"
 )
 
 question4 = (
     "Quelle planète est la plus proche du Soleil ?",
-    ("a - Mercure", "b - Vénus", "c - Mars", "d - Jupiter"),
+    ("Mercure", "Vénus", "Mars", "Jupiter"),
     "Mercure"
 )
 
 question5 = (
     "Qui a peint la Joconde ?",
-    ("a - Vincent Van Gogh", "b - Pablo Picasso", "c - Léonard de Vinci", "d - Claude Monet"),
+    ("Vincent Van Gogh", "Pablo Picasso", "Léonard de Vinci", "Claude Monet"),
     "Léonard de Vinci"
 )
 
 question6 = (
     "Quel langage est principalement utilisé pour le développement web côté serveur ?",
-    ("a - HTML", "b - CSS", "c - Python", "d - JavaScript"),
+    ("HTML", "CSS", "Python", "JavaScript"),
     "Python"
 )
 
