@@ -13,7 +13,7 @@ def afficher_question (question):
     for choix  in range(0, len(choix_reponses)) :
         print (f"{choix + 1}) {choix_reponses [choix]}")
 
-    reponse_utilisateur = input ("Votre réponse : ")
+    reponse_utilisateur = input (f"Votre réponse (entre 1 et {len(choix_reponses)}):")
 
     if reponse_utilisateur.lower() == reponse_correcte.lower() : 
         score = score + 1
