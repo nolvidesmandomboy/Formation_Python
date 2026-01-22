@@ -8,6 +8,7 @@ def afficher_question (question):
     reponse_correcte=question[2]
 
     print (titre_question)
+    print (f"{choix_reponses[0]}\n{choix_reponses[1]}\n{choix_reponses[2]}\n{choix_reponses[3]}")
 
     reponse_utilisateur = input ("Votre réponse : ")
 
