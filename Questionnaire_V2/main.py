@@ -16,7 +16,7 @@ def afficher_question (question):
     reponse_utilisateur_str = input (f"Votre réponse (entre 1 et {len(choix_reponses)}): ")
     reponse_utilisateur_int = int(reponse_utilisateur_str)
 
-    if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower() #or reponse_utilisateur_str.lower() == reponse_correcte.lower(): 
+    if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower(): #or reponse_utilisateur_str.lower() == reponse_correcte.lower(): 
         score = score + 1
         print ("Bien joué ! réponse correcte\n")
     else:
