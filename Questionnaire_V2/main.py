@@ -10,8 +10,8 @@ def afficher_question (question):
     print (titre_question)
     #print (f"{choix_reponses[0]}\n{choix_reponses[1]}\n{choix_reponses[2]}\n{choix_reponses[3]}")
 
-    for choix in choix_reponses :
-        print (choix)
+    for choix  in range(0, len(choix_reponses)) :
+        print (f"{choix + 1}) {choix_reponses [choix]}")
 
     reponse_utilisateur = input ("Votre réponse : ")
 
