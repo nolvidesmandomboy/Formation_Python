@@ -15,8 +15,6 @@ def demander_reponse_numerique_utilisateur (min,max):
         print()
     return demander_reponse_numerique_utilisateur(min,max)'''
 
-
-
 def afficher_question (question):
     global score #permet d'integrer la variable du programme principale dans la fonction sans la rentrer en parametre 
 
@@ -33,6 +31,13 @@ def afficher_question (question):
     reponse_utilisateur_str = input (f"Votre réponse (entre 1 et {len(choix_reponses)}): ")
     try :
         reponse_utilisateur_str = int (reponse_utilisateur_str)
+        reponse_utilisateur_int = int(reponse_utilisateur_str)
+        if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower() :
+                score = score + 1
+                print ("Bien joué ! réponse correcte\n")
+                return
+        else:
+            print ("réponse incorrecte\n")
     except :
         if reponse_utilisateur_str.lower() == reponse_correcte.lower(): 
             print ("Bien joué ! réponse correcte\n")
@@ -41,16 +46,6 @@ def afficher_question (question):
         else:
             print ("réponse incorrecte\n")
         
-    reponse_utilisateur_int = int(reponse_utilisateur_str)
-    if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower() :
-            score = score + 1
-            print ("Bien joué ! réponse correcte\n")
-            return
-    else:
-        print ("réponse incorrecte\n")
-
-    
-
 score = 0
 
 question1 = (
@@ -91,12 +86,7 @@ question6 = (
 
 questionnaire = [question1,question2,question3,question4,question5,question6]
 
-
-afficher_question(question1)
-afficher_question(question2)
-afficher_question(question3)
-afficher_question(question4)
-afficher_question(question5)
-afficher_question(question6)
+for question in questionnaire :
+     afficher_question (question)
 
 print (f"votre score est de {score}")
