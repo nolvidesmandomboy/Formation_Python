@@ -1,5 +1,7 @@
 print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre correspondant aux propositions\n")
 
+''''
+#fonction de Gestion d'erreur 
 def demander_reponse_numerique_utilisateur (min,max):
     reponse_str = input (f"Votre réponse (entre {min} et {max}): ")
     try :
@@ -10,8 +12,8 @@ def demander_reponse_numerique_utilisateur (min,max):
         print(f"ERREUR vous devez rentrer un nombre entre {min} et {max}")
         
     except:
-        print("ERREUR veuillez mettre que des chiffres ptn")
-    return demander_reponse_numerique_utilisateur(min,max)
+        print()
+    return demander_reponse_numerique_utilisateur(min,max)'''
 
 
 
@@ -28,19 +30,31 @@ def afficher_question (question):
     for choix  in range(0, len(choix_reponses)) :
         print (f"{choix + 1}) {choix_reponses [choix]}")
 
-    #reponse_utilisateur_str = input (f"Votre réponse (entre 1 et {len(choix_reponses)}): ")
-    reponse_utilisateur_int = demander_reponse_numerique_utilisateur(1,len(choix_reponses))
-
-    if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower(): #or reponse_utilisateur_str.lower() == reponse_correcte.lower(): 
-        score = score + 1
-        print ("Bien joué ! réponse correcte\n")
+    reponse_utilisateur_str = input (f"Votre réponse (entre 1 et {len(choix_reponses)}): ")
+    try :
+        reponse_utilisateur_str = int (reponse_utilisateur_str)
+    except :
+        if reponse_utilisateur_str.lower() == reponse_correcte.lower(): 
+            print ("Bien joué ! réponse correcte\n")
+            score = score + 1
+            return
+        else:
+            print ("réponse incorrecte\n")
+        
+    reponse_utilisateur_int = int(reponse_utilisateur_str)
+    if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower() :
+            score = score + 1
+            print ("Bien joué ! réponse correcte\n")
+            return
     else:
         print ("réponse incorrecte\n")
+
+    
 
 score = 0
 
 question1 = (
-    "Quelle est la capitale de Paris ?",
+    "Quelle est la capitale de France ?",
     ("Paris", "Nairobi", "Copenhague", "Madrid"),
     "Paris"
 )
@@ -75,7 +89,14 @@ question6 = (
     "Python"
 )
 
+questionnaire = [question1,question2,question3,question4,question5,question6]
 
-afficher_question (question1)
+
+afficher_question(question1)
+afficher_question(question2)
+afficher_question(question3)
+afficher_question(question4)
+afficher_question(question5)
+afficher_question(question6)
 
 print (f"votre score est de {score}")
