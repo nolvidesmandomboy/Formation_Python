@@ -1,5 +1,20 @@
 print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre correspondant aux propositions\n")
 
+def demander_reponse_numerique_utilisateur (min,max):
+    reponse_str = input (f"Votre réponse (entre {min} et {max}): ")
+    try :
+        reponse_int = int(reponse_str)
+        if min < reponse_int <= max:
+            return reponse_int
+        
+        print(f"ERREUR vous devez rentrer un nombre entre {min} et {max}")
+        
+    except:
+        print("ERREUR veuillez mettre que des chiffres ptn")
+    return demander_reponse_numerique_utilisateur(min,max)
+
+
+
 def afficher_question (question):
     global score #permet d'integrer la variable du programme principale dans la fonction sans la rentrer en parametre 
 
@@ -13,8 +28,8 @@ def afficher_question (question):
     for choix  in range(0, len(choix_reponses)) :
         print (f"{choix + 1}) {choix_reponses [choix]}")
 
-    reponse_utilisateur_str = input (f"Votre réponse (entre 1 et {len(choix_reponses)}): ")
-    reponse_utilisateur_int = int(reponse_utilisateur_str)
+    #reponse_utilisateur_str = input (f"Votre réponse (entre 1 et {len(choix_reponses)}): ")
+    reponse_utilisateur_int = demander_reponse_numerique_utilisateur(1,len(choix_reponses))
 
     if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower(): #or reponse_utilisateur_str.lower() == reponse_correcte.lower(): 
         score = score + 1
