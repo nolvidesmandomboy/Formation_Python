@@ -5,7 +5,7 @@ def afficher_question (question):
 
     titre_question =question[0]
     choix_reponses=question[1]
-    reponse_correcte=question[3]
+    reponse_correcte=question[2]
 
     print (titre_question)
 
