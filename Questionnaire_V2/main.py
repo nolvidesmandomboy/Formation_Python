@@ -4,7 +4,7 @@ def demander_reponse_numerique_utilisateur (min,max):
     reponse_str = input (f"Votre réponse (entre {min} et {max}): ")
     try :
         reponse_int = int(reponse_str)
-        if min < reponse_int <= max:
+        if min <= reponse_int <= max:
             return reponse_int
         
         print(f"ERREUR vous devez rentrer un nombre entre {min} et {max}")
