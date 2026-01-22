@@ -12,7 +12,7 @@ def afficher_question (question):
 
     reponse_utilisateur = input ("Votre réponse : ")
 
-    if reponse_utilisateur == reponse_correcte : 
+    if reponse_utilisateur.lower() == reponse_correcte.lower() : 
         score = score + 1
         print ("Bien joué ! réponse correcte\n")
     else:
