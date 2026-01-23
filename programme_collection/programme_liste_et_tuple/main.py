@@ -111,12 +111,12 @@ print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")'''
 
 noms = ["jean","sophie","Martin","jacques","Simi"]
 
-noms_supplementaires = ["christophe", "Zoé"]
+'''noms_supplementaires = ["christophe", "Zoé"]
 
 def tri_personnalise (nom): #création d'une fonction pour le tri personnalisée
     return len(nom)
 
-'''noms.append(noms_supplementaires) #<- ça rajoute à la liste nom la liste contenant les chaînes de caractères des noms supplémentaires et non pas directirecment les noms supplémentaires.
+noms.append(noms_supplementaires) #<- ça rajoute à la liste nom la liste contenant les chaînes de caractères des noms supplémentaires et non pas directirecment les noms supplémentaires.
 
 noms.extend(noms_supplementaires) #<- permet d'ajouter les éléments de la liste individuellement et non pas comme une liste
 
@@ -133,7 +133,9 @@ slice_noms[1] = "Fesses" #<- Ici faire une modification ne va pas modifier aussi
 print (noms)
 print(slice_noms)'''
 
-noms.sort() #<-agit directement sur la liste originale 
+#Sort et Sorted
+
+'''noms.sort() #<-agit directement sur la liste originale 
 
 noms_supplementaires.sort(key=tri_personnalise) #<- va permettre de faire le tri selon un paramètre personnalisé. Le key va être la clé qui va appliqué la fonction qu'on donne à chacun des éléments pour pouvoir faire le tri. Ici typiquement, quand on mets la fonction tri_personnalise comme key, il va retourner ce que la fonction demande de retourner (ici le nombre de caractères du coup vu que c'est len) et l'appliquer pour chaque éléments de la liste afin de faire le tri
 
@@ -141,4 +143,4 @@ noms_tries = sorted (noms) #<- permet de créer une nouvelle liste triée qui n'
 
 print (noms)
 print (noms_tries)
-print(noms_supplementaires)
+print(noms_supplementaires)'''
