@@ -129,3 +129,6 @@ slice_noms[1] = "Fesses" #<- Ici faire une modification ne va pas modifier aussi
 
 print (noms)
 print(slice_noms)'''
+
+noms.sort()
+print(noms)
