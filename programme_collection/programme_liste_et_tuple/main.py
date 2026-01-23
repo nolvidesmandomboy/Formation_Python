@@ -110,3 +110,17 @@ print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")'''
 #APPEND, Extend, Insert, +=
 
 noms = ["jean","sophie","Martin"]
+
+noms_supplementaires = ["christophe", "Zoé"]
+
+#noms.append(noms_supplementaires) #<- ça rajoute à la liste nom la liste contenant les chaînes de caractères des noms supplémentaires et non pas directirecment les noms supplémentaires.
+
+#noms.extend(noms_supplementaires) #<- permet d'ajouter les éléments de la liste individuellement et non pas comme une liste
+
+#noms += noms_supplementaires #<- ça fonctionne exactement comme l'extend
+
+#noms.insert(0,noms_supplementaires) #<- permet d'insérer un élément en lui attribuant un place dans la liste
+
+noms = noms_supplementaires + noms #<- se comporte exactement comme le Insert et ne prends pas la liste mais les éléments de la liste individuellement
+
+print (noms)
