@@ -106,3 +106,7 @@ print (f"distance minimale : {distance_minimal} km")
 print (f"index de la distance minimale : {distance_chauffeur.index(0.15)}")
 print (f"index de la distance minimale : {index_min}")
 print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")'''
+
+#APPEND, Extend, Insert, +=
+
+noms = ["jean","sophie","Martin"]
