@@ -48,10 +48,10 @@ infos = obtenir_infos()
 def afficher_infos(nom,age,taff,taille):
     print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
 
-afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement
+afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement'''
 
 #Les slices 
-personne = ("Mélanie", "Victor", "Thomas", "Nicolas","Jamy","Anais","Sophia","Bebeto") 
+'''personne = ("Mélanie", "Victor", "Thomas", "Nicolas","Jamy","Anais","Sophia","Bebeto") 
 
 for i in personne[0:3]: #<- le slice permet de choisir les éléments du tuple de 0 à n = [start:stop:step]
     print (i)
@@ -81,7 +81,7 @@ afficher_nom_personnes (nom)'''
 
 #Exercice 2 : Algorithme "Valeur la plus petite"
 
-distance_chauffeur = [12.5, 8.3, 15.0, 4.7, 22.1, 9.8, 13.4, 18.6, 7.2, 5.9, 11.0, 14.3, 19.7, 3.5, 27.8, 16.4, 20.2, 6.1, 10.5, 23.9, 0.3, 0.7, 1.2, 0.9, 0.4, 0.15, 0.8]
+'''distance_chauffeur = [12.5, 8.3, 15.0, 4.7, 22.1, 9.8, 13.4, 18.6, 7.2, 5.9, 11.0, 14.3, 19.7, 3.5, 27.8, 16.4, 20.2, 6.1, 10.5, 23.9, 0.3, 0.7, 1.2, 0.9, 0.4, 0.15, 0.8]
 
 noms_chauffeurs = [ "Melanie", "Lucas", "Sarah", "Nina", "Adam", "Yanis", "Lina", "Sofia", "Noah", "Emma","Hugo", "Chloé", "Léo", "Maya", "Ethan", "Inès", "Tom", "Lola", "Jules", "Manon", "Elyas", "Nora", "Iris", "Milan", "Ava", "Liam", "Zoé"]
 
@@ -105,4 +105,4 @@ for i in range (len(distance_chauffeur)) :
 print (f"distance minimale : {distance_minimal} km")
 print (f"index de la distance minimale : {distance_chauffeur.index(0.15)}")
 print (f"index de la distance minimale : {index_min}")
-print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")
+print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")'''
