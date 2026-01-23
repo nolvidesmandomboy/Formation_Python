@@ -131,6 +131,7 @@ print (noms)
 print(slice_noms)'''
 
 noms.sort() #<-agit directement sur la liste originale 
+noms_supplementaires.sort(key=lambda nom : len(nom)) #<- va permettre de faire le tri par le nombre de lettres
 noms_tries = sorted (noms) #<- permet de créer une nouvelle liste triée qui n'affecte pas la liste originale
 print (noms)
 print (noms_tries)
