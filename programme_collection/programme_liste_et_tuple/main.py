@@ -113,19 +113,19 @@ noms = ["jean","sophie","Martin","jacques","Simi"]
 
 noms_supplementaires = ["christophe", "Zoé"]
 
-#noms.append(noms_supplementaires) #<- ça rajoute à la liste nom la liste contenant les chaînes de caractères des noms supplémentaires et non pas directirecment les noms supplémentaires.
+'''noms.append(noms_supplementaires) #<- ça rajoute à la liste nom la liste contenant les chaînes de caractères des noms supplémentaires et non pas directirecment les noms supplémentaires.
 
-#noms.extend(noms_supplementaires) #<- permet d'ajouter les éléments de la liste individuellement et non pas comme une liste
+noms.extend(noms_supplementaires) #<- permet d'ajouter les éléments de la liste individuellement et non pas comme une liste
 
-#noms += noms_supplementaires #<- ça fonctionne exactement comme l'extend
+noms += noms_supplementaires #<- ça fonctionne exactement comme l'extend
 
-#noms.insert(0,noms_supplementaires) #<- permet d'insérer un élément en lui attribuant un place dans la liste
+noms.insert(0,noms_supplementaires) #<- permet d'insérer un élément en lui attribuant un place dans la liste
 
-#noms = noms_supplementaires + noms #<- se comporte exactement comme le Insert et ne prends pas la liste mais les éléments de la liste individuellement
+noms = noms_supplementaires + noms #<- se comporte exactement comme le Insert et ne prends pas la liste mais les éléments de la liste individuellement
 
 slice_noms=noms[:] #<- les deux points ici vont prendre toute la liste et permettent de choisir des éléments en spécifiant la place de départ (à gauche des deux points), et la place d'arrivée (à droite des deux point)
 
 slice_noms[1] = "Fesses" #<- Ici faire une modification ne va pas modifier aussi la liste noms, car dans slice_nms c'est une copie de la liste qu'on a faites. Du coup là on aura deux listes différentes.
 
 print (noms)
-print(slice_noms)
+print(slice_noms)'''
