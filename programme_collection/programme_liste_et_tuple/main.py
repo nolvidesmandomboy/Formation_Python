@@ -130,5 +130,7 @@ slice_noms[1] = "Fesses" #<- Ici faire une modification ne va pas modifier aussi
 print (noms)
 print(slice_noms)'''
 
-noms.sort()
-print(noms)
+noms.sort() #<-agit directement sur la liste originale 
+noms_tries = sorted (noms) #<- permet de créer une nouvelle liste triée qui n'affecte pas la liste originale
+print (noms)
+print (noms_tries)
