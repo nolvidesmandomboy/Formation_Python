@@ -166,3 +166,14 @@ print (noms_split)'''
 print (longueur_noms)'''
 
 #Isdigit
+
+nom = "toto2"
+
+'''for ch in nom:
+    if ch.isdigit() == True: #<- ça permet de savoir si la chaîne de caractères est composé uniquement de nombres, mais lorsque c'est mélangé chaîne de caractère/nombre, il faut faire une boucle comme là ou faire une fonction
+        print ("Il y a un nombre")
+
+def contient_un_chiffre(chaine):
+    for ch in chaine:
+        if ch.isdigit():
+            return True'''
