@@ -150,3 +150,4 @@ print(noms_supplementaires)'''
 ages = [12,15,34,55]
 
 print (min(ages))
+print(min(noms)) #<- représente la chaîne de caracère selon l'ordre alphabétique
