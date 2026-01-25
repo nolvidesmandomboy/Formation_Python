@@ -1,4 +1,4 @@
-print("hello word")
+#print("hello word")
 #Les Tuples 
 
 '''personne = ("Mélanie", "Victor", "Thomas", "Nicolas") #<- c'est un tuple, contrairement aux listes, c'est avec des parenthèses et c'st fixe, on ne peut pas le modifier ni rajouter des éléments c'est immutable
@@ -190,7 +190,19 @@ if element_dans_liste("martin",noms):
 else:
     print ("absent")'''
 
-#Exercice 2
+# Exercice "Extraire les extensions"
+
+def extraire_extension(nom_fichier):
+    nom_fichier_split = nom_fichier.split(".")
+    if len(nom_fichier_split) > 1:
+        return nom_fichier_split[-1]
+    return None
+
+def obtenir_definition_extension(extension, definitions):
+    for d in definitions:
+        if d[0].lower() == extension.lower():
+            return d[1]
+    return None
 
 fichiers = ("notepad.exe", "mon.fichier.perso.doc", "notes.TXT", "vacances.jpeg", "planning", "data.dat")
 
@@ -203,3 +215,14 @@ definition_extensions = (("doc", "Document Word"),
                         "exe": "Executable",
                         "txt": "Document Texte",
                         "jpeg": "Image JPEG"}"""
+
+for fichier in fichiers:
+    ext = extraire_extension(fichier)
+    if ext:
+        definition = obtenir_definition_extension(ext, definition_extensions)
+        # definition = definition_extensions_dict.get(ext.lower())
+        if not definition:
+            definition = "Extension non connue"
+    else:
+        definition = "Aucune extension"
+    print(fichier + " (" + definition + ")")
