@@ -189,3 +189,17 @@ if element_dans_liste("martin",noms):
     print ("Présent !!!")
 else:
     print ("absent")'''
+
+#Exercice 2
+
+fichiers = ("notepad.exe", "mon.fichier.perso.doc", "notes.TXT", "vacances.jpeg", "planning", "data.dat")
+
+definition_extensions = (("doc", "Document Word"),
+                        ("exe", "Executable"),
+                        ("txt", "Document Texte"),
+                        ("jpeg", "Image JPEG"))
+
+"""definition_extensions_dict = {"doc": "Document Word",
+                        "exe": "Executable",
+                        "txt": "Document Texte",
+                        "jpeg": "Image JPEG"}"""
