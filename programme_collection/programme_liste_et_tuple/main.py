@@ -239,6 +239,8 @@ for i in table:
 
 print (f"La liste a {nombre} caractères")
 
+noms = sum([len(nom) for nom in noms])
+print(noms)
 
     
 
