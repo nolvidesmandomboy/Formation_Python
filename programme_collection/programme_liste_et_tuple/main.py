@@ -239,8 +239,9 @@ for i in table:
 
 print (f"La liste a {nombre} caractères")
 
-noms = sum([len(nom) for nom in noms])
-print(noms)
+noms_ = sum([len(nom) for nom in noms])
+print(noms_)
 
-    
 
+nv_liste_noms = "".join(noms)
+print(len(nv_liste_noms))
