@@ -144,3 +144,7 @@ noms_tries = sorted (noms) #<- permet de créer une nouvelle liste triée qui n'
 print (noms)
 print (noms_tries)
 print(noms_supplementaires)'''
+
+#Min, Max, in, sum
+
+ages = [12,15,34,55]
