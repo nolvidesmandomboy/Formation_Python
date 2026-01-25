@@ -228,6 +228,8 @@ for fichier in fichiers:
     print(fichier + " (" + definition + ")")'''
 
 #Exercice 3
+
+#boucle for 
 table = []
 nombre = 0
 for nom in noms:
@@ -239,9 +241,10 @@ for i in table:
 
 print (f"La liste a {nombre} caractères")
 
+#len et complétion de liste
 noms_ = sum([len(nom) for nom in noms])
 print(noms_)
 
-
+#len et join
 nv_liste_noms = "".join(noms)
 print(len(nv_liste_noms))
