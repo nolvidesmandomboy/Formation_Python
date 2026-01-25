@@ -229,7 +229,7 @@ for fichier in fichiers:
 
 #Exercice 3
 
-#boucle for 
+'''#boucle for et len
 table = []
 nombre = 0
 for nom in noms:
@@ -247,4 +247,4 @@ print(noms_)
 
 #len et join
 nv_liste_noms = "".join(noms)
-print(len(nv_liste_noms))
+print(len(nv_liste_noms))'''
