@@ -237,7 +237,7 @@ for i in table:
     nombre += i
         
 
-print (nombre)
+print (f"La liste a {nombre} caractères")
 
 
     
