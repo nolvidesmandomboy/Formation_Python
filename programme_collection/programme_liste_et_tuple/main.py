@@ -177,3 +177,15 @@ def contient_un_chiffre(chaine):
     for ch in chaine:
         if ch.isdigit():
             return True'''
+
+#Exercice 
+
+def element_dans_liste (elementstr,liste):
+    liste = [e.lower() for e in liste]
+    if elementstr.lower() in liste:
+        return elementstr in liste 
+    
+if element_dans_liste("martin",noms):
+    print ("Présent !!!")
+else:
+    print ("absent")
