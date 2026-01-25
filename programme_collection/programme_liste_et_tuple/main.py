@@ -161,6 +161,6 @@ print (noms_split)'''
 
 # comprehension de liste 
 
-longueur_noms = [len(nom) for nom in noms] #Permet de directement afficher des trucs de la liste sans passer par des créations de variables et de boucle au préalable. On peut aussi y rajouter des condition
+longueur_noms = [len(nom) for nom in noms] #Permet de directement afficher des trucs de la liste sans passer par des créations de variables et de boucle au préalable. On peut aussi y rajouter des condition à droite comme à gauche
 
 print (longueur_noms)
