@@ -180,7 +180,7 @@ def contient_un_chiffre(chaine):
 
 #Exercice 
 
-def element_dans_liste (elementstr,liste):
+'''def element_dans_liste (elementstr,liste):
     liste = [e.lower() for e in liste]
     if elementstr.lower() in liste:
         return elementstr in liste 
@@ -188,4 +188,4 @@ def element_dans_liste (elementstr,liste):
 if element_dans_liste("martin",noms):
     print ("Présent !!!")
 else:
-    print ("absent")
+    print ("absent")'''
