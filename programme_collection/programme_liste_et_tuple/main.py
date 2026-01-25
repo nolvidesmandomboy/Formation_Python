@@ -109,7 +109,7 @@ print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")'''
 
 #APPEND, Extend, Insert, +=
 
-noms = ["jean","sophie","Martin","jacques","Simi"]
+noms = ["jean","sophie","Martin","jacques","Simi","toto"]
 
 '''noms_supplementaires = ["christophe", "Zoé"]
 
@@ -192,7 +192,7 @@ else:
 
 # Exercice "Extraire les extensions"
 
-def extraire_extension(nom_fichier):
+'''def extraire_extension(nom_fichier):
     nom_fichier_split = nom_fichier.split(".")
     if len(nom_fichier_split) > 1:
         return nom_fichier_split[-1]
@@ -225,4 +225,20 @@ for fichier in fichiers:
             definition = "Extension non connue"
     else:
         definition = "Aucune extension"
-    print(fichier + " (" + definition + ")")
+    print(fichier + " (" + definition + ")")'''
+
+#Exercice 3
+table = []
+nombre = 0
+for nom in noms:
+    x = len(nom)
+    table.append(x)
+for i in table:
+    nombre += i
+        
+
+print (nombre)
+
+
+    
+
