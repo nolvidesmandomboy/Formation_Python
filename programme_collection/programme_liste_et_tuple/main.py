@@ -151,3 +151,10 @@ ages = [12,15,34,55]
 
 print (min(ages))
 print(min(noms)) #<- représente la chaîne de caracère selon l'ordre alphabétique
+
+#Join et split
+
+noms_join = ", ".join(noms) #<- permet de concaténer tous les éléments en chaîne de caractères d'une liste avec un séparation en chaîne de caractère qu'on défini au départ
+print(noms_join)
+noms_split = noms_join.split(", ") #<- permet de faire le contraire de join, et de mettre des chaînes de caractères dans une liste avec un séparateur
+print (noms_split)
