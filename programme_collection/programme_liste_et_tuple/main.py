@@ -148,3 +148,5 @@ print(noms_supplementaires)'''
 #Min, Max, in, sum
 
 ages = [12,15,34,55]
+
+print (min(ages))
