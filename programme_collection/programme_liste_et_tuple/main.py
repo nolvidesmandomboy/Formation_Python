@@ -248,3 +248,7 @@ print(noms_)
 #len et join
 nv_liste_noms = "".join(noms)
 print(len(nv_liste_noms))'''
+
+#Fonction Zip
+
+pizza_noms = ("margherita", "végétarienne", "4 fromages","hawai")
