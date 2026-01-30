@@ -256,3 +256,5 @@ pizza_prix = (10,20,4,5)
 noms_et_prix = list(zip (pizza_noms,pizza_prix)) #<- va associer le premier élément de la première liste avec le premier da la deuxième, le deuxième avec la deuxième et ainsi de suite, la fonction list permet de la convertir en liste parce que sans ça on peut pas la lire
 
 print(noms_et_prix)
+
+unzipped = list(zip(*noms_et_prix)) #<- permet ici de faire le contraire de zip et donc de séparer les éléments
