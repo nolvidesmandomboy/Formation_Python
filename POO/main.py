@@ -9,3 +9,9 @@ def demander_nom ():
 
 #Programmation orientée objet
 
+#Définition des classes 
+
+class Personne:
+    pass
+
+#Utilisation
