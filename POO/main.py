@@ -12,7 +12,8 @@ def demander_nom ():
 #Définition des classes 
 
 class Personne:
-    pass
+    def __init__(self):
+        print("Constructeur personne")
 
 #Utilisation
 personne1 = Personne #Je crée une personne
