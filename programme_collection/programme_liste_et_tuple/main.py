@@ -1,4 +1,4 @@
-print("hello word")
+#print("hello word")
 #Les Tuples 
 
 '''personne = ("Mélanie", "Victor", "Thomas", "Nicolas") #<- c'est un tuple, contrairement aux listes, c'est avec des parenthèses et c'st fixe, on ne peut pas le modifier ni rajouter des éléments c'est immutable
@@ -48,10 +48,10 @@ infos = obtenir_infos()
 def afficher_infos(nom,age,taff,taille):
     print (f"Prénom : {nom}, age : {age} ans, activité : {taff}, taille : {taille} m")
 
-afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement
+afficher_infos(*infos) #<- le * permet d'ouvrir le tuple et d'affecter chacune des valeurs qu'il a comme étant un paramètre de la fonction, si je ne l'avais pas mis il l'aurait compté comme étant le premier paramètre uniquement'''
 
 #Les slices 
-personne = ("Mélanie", "Victor", "Thomas", "Nicolas","Jamy","Anais","Sophia","Bebeto") 
+'''personne = ("Mélanie", "Victor", "Thomas", "Nicolas","Jamy","Anais","Sophia","Bebeto") 
 
 for i in personne[0:3]: #<- le slice permet de choisir les éléments du tuple de 0 à n = [start:stop:step]
     print (i)
@@ -81,7 +81,7 @@ afficher_nom_personnes (nom)'''
 
 #Exercice 2 : Algorithme "Valeur la plus petite"
 
-distance_chauffeur = [12.5, 8.3, 15.0, 4.7, 22.1, 9.8, 13.4, 18.6, 7.2, 5.9, 11.0, 14.3, 19.7, 3.5, 27.8, 16.4, 20.2, 6.1, 10.5, 23.9, 0.3, 0.7, 1.2, 0.9, 0.4, 0.15, 0.8]
+'''distance_chauffeur = [12.5, 8.3, 15.0, 4.7, 22.1, 9.8, 13.4, 18.6, 7.2, 5.9, 11.0, 14.3, 19.7, 3.5, 27.8, 16.4, 20.2, 6.1, 10.5, 23.9, 0.3, 0.7, 1.2, 0.9, 0.4, 0.15, 0.8]
 
 noms_chauffeurs = [ "Melanie", "Lucas", "Sarah", "Nina", "Adam", "Yanis", "Lina", "Sofia", "Noah", "Emma","Hugo", "Chloé", "Léo", "Maya", "Ethan", "Inès", "Tom", "Lola", "Jules", "Manon", "Elyas", "Nora", "Iris", "Milan", "Ava", "Liam", "Zoé"]
 
@@ -105,4 +105,159 @@ for i in range (len(distance_chauffeur)) :
 print (f"distance minimale : {distance_minimal} km")
 print (f"index de la distance minimale : {distance_chauffeur.index(0.15)}")
 print (f"index de la distance minimale : {index_min}")
-print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")
+print (f"nom du chauffeur à la distance minimale : {nom_chauffeur_min}")'''
+
+#APPEND, Extend, Insert, +=
+
+noms = ["jean","sophie","Martin","jacques","Simi","toto"]
+
+'''noms_supplementaires = ["christophe", "Zoé"]
+
+def tri_personnalise (nom): #création d'une fonction pour le tri personnalisée
+    return len(nom)
+
+noms.append(noms_supplementaires) #<- ça rajoute à la liste nom la liste contenant les chaînes de caractères des noms supplémentaires et non pas directirecment les noms supplémentaires.
+
+noms.extend(noms_supplementaires) #<- permet d'ajouter les éléments de la liste individuellement et non pas comme une liste
+
+noms += noms_supplementaires #<- ça fonctionne exactement comme l'extend
+
+noms.insert(0,noms_supplementaires) #<- permet d'insérer un élément en lui attribuant un place dans la liste
+
+noms = noms_supplementaires + noms #<- se comporte exactement comme le Insert et ne prends pas la liste mais les éléments de la liste individuellement
+
+slice_noms=noms[:] #<- les deux points ici vont prendre toute la liste et permettent de choisir des éléments en spécifiant la place de départ (à gauche des deux points), et la place d'arrivée (à droite des deux point)
+
+slice_noms[1] = "Fesses" #<- Ici faire une modification ne va pas modifier aussi la liste noms, car dans slice_nms c'est une copie de la liste qu'on a faites. Du coup là on aura deux listes différentes.
+
+print (noms)
+print(slice_noms)'''
+
+#Sort et Sorted
+
+'''noms.sort() #<-agit directement sur la liste originale 
+
+noms_supplementaires.sort(key=tri_personnalise) #<- va permettre de faire le tri selon un paramètre personnalisé. Le key va être la clé qui va appliqué la fonction qu'on donne à chacun des éléments pour pouvoir faire le tri. Ici typiquement, quand on mets la fonction tri_personnalise comme key, il va retourner ce que la fonction demande de retourner (ici le nombre de caractères du coup vu que c'est len) et l'appliquer pour chaque éléments de la liste afin de faire le tri
+
+noms_tries = sorted (noms) #<- permet de créer une nouvelle liste triée qui n'affecte pas la liste originale
+
+print (noms)
+print (noms_tries)
+print(noms_supplementaires)'''
+
+#Min, Max, in, sum
+
+'''ages = [12,15,34,55]
+
+print (min(ages))
+print(min(noms)) #<- représente la chaîne de caracère selon l'ordre alphabétique'''
+
+#Join et split
+
+'''noms_join = ", ".join(noms) #<- permet de concaténer tous les éléments en chaîne de caractères d'une liste avec un séparation en chaîne de caractère qu'on défini au départ
+print(noms_join)
+noms_split = noms_join.split(", ") #<- permet de faire le contraire de join, et de mettre des chaînes de caractères dans une liste avec un séparateur
+print (noms_split)'''
+
+# comprehension de liste 
+
+'''longueur_noms = [len(nom) for nom in noms] #Permet de directement afficher des trucs de la liste sans passer par des créations de variables et de boucle au préalable. On peut aussi y rajouter des condition à droite comme à gauche
+
+print (longueur_noms)'''
+
+#Isdigit
+
+nom = "toto2"
+
+'''for ch in nom:
+    if ch.isdigit() == True: #<- ça permet de savoir si la chaîne de caractères est composé uniquement de nombres, mais lorsque c'est mélangé chaîne de caractère/nombre, il faut faire une boucle comme là ou faire une fonction
+        print ("Il y a un nombre")
+
+def contient_un_chiffre(chaine):
+    for ch in chaine:
+        if ch.isdigit():
+            return True'''
+
+#Exercice 
+
+'''def element_dans_liste (elementstr,liste):
+    liste = [e.lower() for e in liste]
+    if elementstr.lower() in liste:
+        return elementstr in liste 
+    
+if element_dans_liste("martin",noms):
+    print ("Présent !!!")
+else:
+    print ("absent")'''
+
+# Exercice "Extraire les extensions"
+
+'''def extraire_extension(nom_fichier):
+    nom_fichier_split = nom_fichier.split(".")
+    if len(nom_fichier_split) > 1:
+        return nom_fichier_split[-1]
+    return None
+
+def obtenir_definition_extension(extension, definitions):
+    for d in definitions:
+        if d[0].lower() == extension.lower():
+            return d[1]
+    return None
+
+fichiers = ("notepad.exe", "mon.fichier.perso.doc", "notes.TXT", "vacances.jpeg", "planning", "data.dat")
+
+definition_extensions = (("doc", "Document Word"),
+                        ("exe", "Executable"),
+                        ("txt", "Document Texte"),
+                        ("jpeg", "Image JPEG"))
+
+"""definition_extensions_dict = {"doc": "Document Word",
+                        "exe": "Executable",
+                        "txt": "Document Texte",
+                        "jpeg": "Image JPEG"}"""
+
+for fichier in fichiers:
+    ext = extraire_extension(fichier)
+    if ext:
+        definition = obtenir_definition_extension(ext, definition_extensions)
+        # definition = definition_extensions_dict.get(ext.lower())
+        if not definition:
+            definition = "Extension non connue"
+    else:
+        definition = "Aucune extension"
+    print(fichier + " (" + definition + ")")'''
+
+#Exercice 3
+
+'''#boucle for et len
+table = []
+nombre = 0
+for nom in noms:
+    x = len(nom)
+    table.append(x)
+for i in table:
+    nombre += i
+        
+
+print (f"La liste a {nombre} caractères")
+
+#len et complétion de liste
+noms_ = sum([len(nom) for nom in noms])
+print(noms_)
+
+#len et join
+nv_liste_noms = "".join(noms)
+print(len(nv_liste_noms))'''
+
+#Fonction Zip
+
+'''pizza_noms = ("margherita", "végétarienne", "4 fromages","hawai")
+pizza_prix = (10,20,4,5)
+noms_et_prix = list(zip (pizza_noms,pizza_prix)) #<- va associer le premier élément de la première liste avec le premier da la deuxième, le deuxième avec la deuxième et ainsi de suite, la fonction list permet de la convertir en liste parce que sans ça on peut pas la lire
+
+print(noms_et_prix)
+
+unzipped = list(zip(*noms_et_prix)) #<- permet ici de faire le contraire de zip et donc de séparer les éléments
+pp,pn = unzipped #<- là on réattribue ses éléments en  deux tuples 
+print (pp)
+print (pn)'''
