@@ -15,3 +15,4 @@ class Personne:
     pass
 
 #Utilisation
+personne1 = Personne #Je crée une personne
