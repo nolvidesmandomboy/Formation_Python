@@ -258,3 +258,6 @@ noms_et_prix = list(zip (pizza_noms,pizza_prix)) #<- va associer le premier él�
 print(noms_et_prix)
 
 unzipped = list(zip(*noms_et_prix)) #<- permet ici de faire le contraire de zip et donc de séparer les éléments
+pp,pn = unzipped #<- là on réattribue ses éléments en  deux tuples 
+print (pp)
+print (pn)
