@@ -20,5 +20,5 @@ class Personne:
         print(f"Bonjour je m'appelle {self.nom}, j'ai {self.age} ans") 
 
 #Utilisation
-personne1 = Personne("Jean") #Je crée une personne
+personne1 = Personne("Jean",40) #Je crée une personne
 personne1.sepresenter()
