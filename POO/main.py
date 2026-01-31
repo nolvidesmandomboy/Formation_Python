@@ -12,8 +12,11 @@ def demander_nom ():
 #Définition des classes 
 
 class Personne:
-    def __init__(self):
-        print("Constructeur personne")
+    def __init__(self, nom):
+        self.nom = nom
+
+    def sepresenter (self):
+        print(f"Bonjour je m'appelle {self.nom}") 
 
 #Utilisation
-personne1 = Personne #Je crée une personne
+personne1 = Personne("Jean") #Je crée une personne
