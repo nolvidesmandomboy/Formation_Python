@@ -20,3 +20,4 @@ class Personne:
 
 #Utilisation
 personne1 = Personne("Jean") #Je crée une personne
+personne1.sepresenter
