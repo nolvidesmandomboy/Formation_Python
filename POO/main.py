@@ -34,7 +34,7 @@ class Personne:
         return False
     
     def demandernom (self):
-        nom = input ("Quel est votre nom ?")
+        nom = input ("Quel est votre nom ? ")
         return nom
         
 
