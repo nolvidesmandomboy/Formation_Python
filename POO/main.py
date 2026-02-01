@@ -11,7 +11,7 @@ def demander_nom ():
 
 #Définition des classes 
 
-class Personne:
+'''class Personne:
     def __init__(self, nom="", age=0):
         self.nom = nom
         self.age = age 
@@ -43,14 +43,14 @@ class Personne:
 personne1 = Personne("Jean") #Je crée une personne
 personne2 = Personne ("Paul",15)
 personne3 = Personne()
-'''personne1.sepresenter()
+personne1.sepresenter()
 personne2.sepresenter()
-personne3.sepresenter()'''
+personne3.sepresenter()
 
 #personne1.nom = "toto" #<- on peut altérer la valeur d'une valeur de la classe en dehors du code
 #personne1.sepresenter()
 
-#print ("Estmajeur2 : ", personne2.estmajeur())
+#print ("Estmajeur2 : ", personne2.estmajeur())'''
 
 # EXERCICE DE MISE EN SITUATION 1
 # genre
@@ -145,7 +145,31 @@ personne.SePresenter()  # Bonjour, je suis une personne et je m'appelle Jean'''
 
 #Exercice - Présenter toutes les personnes
 
-liste_personnes = [personne1,personne2,personne3]
+'''liste_personnes = [personne1,personne2,personne3]
 
 for i in liste_personnes:
-    i.sepresenter()
+    i.sepresenter()'''
+
+# POO EXERCICE DE MISE EN SITUATION 4
+
+# ---
+class Personne:
+    def __init__(self, nom: str):
+        self.nom = nom
+
+    def SePresenter(self):
+        print("Bonjour, je m'appelle " + self.nom)
+
+# ---
+noms = []
+noms.append(input("nom de la personne 1 : "))
+noms.append(input("nom de la personne 2 : "))
+noms.append(input("nom de la personne 3 : "))
+
+l = []
+
+for nom in noms:
+    l.append(Personne(nom))
+
+for p in l:
+    print(p.SePresenter())
