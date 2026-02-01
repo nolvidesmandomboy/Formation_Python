@@ -11,7 +11,7 @@ def demander_nom ():
 
 #Définition des classes 
 
-'''class Personne:
+class Personne:
     def __init__(self, nom="", age=0):
         self.nom = nom
         self.age = age 
@@ -43,14 +43,14 @@ def demander_nom ():
 personne1 = Personne("Jean") #Je crée une personne
 personne2 = Personne ("Paul",15)
 personne3 = Personne()
-personne1.sepresenter()
+'''personne1.sepresenter()
 personne2.sepresenter()
-personne3.sepresenter()
+personne3.sepresenter()'''
 
 #personne1.nom = "toto" #<- on peut altérer la valeur d'une valeur de la classe en dehors du code
 #personne1.sepresenter()
 
-#print ("Estmajeur2 : ", personne2.estmajeur())'''
+#print ("Estmajeur2 : ", personne2.estmajeur())
 
 # EXERCICE DE MISE EN SITUATION 1
 # genre
@@ -118,7 +118,7 @@ personne2.SePresenter()'''
 # POO EXERCICE DE MISE EN SITUATION 3
 
 # ---
-class Chat:
+'''class Chat:
     def __init__(self, nom = "inconnu"):
         self.nom = nom
 
@@ -141,4 +141,6 @@ chat2 = Chat("Garfield")
 chat2.SePresenter()  # Bonjour, je suis un chat et je m'appelle Garfield
 
 personne = Personne("Jean")
-personne.SePresenter()  # Bonjour, je suis une personne et je m'appelle Jean
+personne.SePresenter()  # Bonjour, je suis une personne et je m'appelle Jean'''
+
+#Exercice - Présenter toutes les personnes
