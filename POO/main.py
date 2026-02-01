@@ -72,10 +72,16 @@ class Personne:
         else:
             print("Genre : Feminin")
             print()
+
+        e_optionnel = ""
+
+        if self.genre == False:
+            e_optionnel = "e"
+
         if self.EstMajeur():
-            print("Je suis majeur")
+            print(f"Je suis majeur{e_optionnel}")
         else:
-            print("Je suis mineur")
+            print(f"Je suis mineur{e_optionnel}")
         print()
 
     def EstMajeur(self):
