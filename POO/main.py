@@ -103,10 +103,7 @@ class Personne:
         # Bonjour, je m'appelle Jean, j'ai 30 ans
         # Je suis majeur
         print("Bonjour, je m'appelle " + self.nom + ", j'ai " + str(self.age) + " ans")
-        if self.EstMajeur():
-            print("Je suis majeur")
-        else:
-            print("Je suis mineur")
+        print("Je suis majeur") if self.EstMajeur() else print("Je suis mineur")
         print()
 
     def EstMajeur(self):
