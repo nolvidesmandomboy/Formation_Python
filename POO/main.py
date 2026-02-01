@@ -71,7 +71,6 @@ class Personne:
             print("Genre : Masculin")
         else:
             print("Genre : Feminin")
-            print()
 
         e_optionnel = ""
 
