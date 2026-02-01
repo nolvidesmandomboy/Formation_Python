@@ -38,4 +38,4 @@ personne2.sepresenter()
 #personne1.nom = "toto" #<- on peut altérer la valeur d'une valeur de la classe en dehors du code
 #personne1.sepresenter()
 
-print ("Estmajeur2 : ", personne2.estmajeur())
+#print ("Estmajeur2 : ", personne2.estmajeur())
