@@ -21,7 +21,9 @@ class Personne:
 
 #Utilisation
 personne1 = Personne("Jean",40) #Je crée une personne
+personne2 = Personne ("Paul",15)
 personne1.sepresenter()
+personne2.sepresenter()
 
-personne1.nom = "toto" #<- on peut altérer la valeur d'une valeur de la classe en dehors du code
-personne1.sepresenter()
+#personne1.nom = "toto" #<- on peut altérer la valeur d'une valeur de la classe en dehors du code
+#personne1.sepresenter()
