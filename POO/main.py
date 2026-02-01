@@ -22,6 +22,7 @@ class Personne:
     def estmajeur (self):
         if self.age >= 18:
             return True
+        return False
         
 
 #Utilisation
@@ -33,4 +34,4 @@ personne2.sepresenter()
 #personne1.nom = "toto" #<- on peut altérer la valeur d'une valeur de la classe en dehors du code
 #personne1.sepresenter()
 
-print ("Estmajeur1 : ", personne1.estmajeur())
+print ("Estmajeur2 : ", personne2.estmajeur())
