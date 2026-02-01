@@ -19,10 +19,11 @@ class Personne:
             self.nom = self.demandernom()
 
     def sepresenter (self):
+        info_personne = f"Bonjour je m'appelle {self.nom}"
         if self.age == 0:
-            print(f"Bonjour je m'appelle {self.nom}") 
+             print (info_personne)
         else:
-            print(f"Bonjour je m'appelle {self.nom}, j'ai {self.age} ans")
+            print(f"{info_personne}, j'ai {self.age} ans")
             if self.estmajeur():
                 print ("Je suis majeur")
             else:
