@@ -146,3 +146,6 @@ personne.SePresenter()  # Bonjour, je suis une personne et je m'appelle Jean'''
 #Exercice - Présenter toutes les personnes
 
 liste_personnes = [personne1,personne2,personne3]
+
+for i in liste_personnes:
+    i.sepresenter()
