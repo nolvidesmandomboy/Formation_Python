@@ -15,6 +15,8 @@ class Personne:
     def __init__(self, nom="", age=0):
         self.nom = nom
         self.age = age 
+        if self.nom == "":
+            self.nom = self.demandernom()
 
     def sepresenter (self):
         if self.age == 0:
@@ -30,13 +32,19 @@ class Personne:
         if self.age >= 18:
             return True
         return False
+    
+    def demandernom (self):
+        nom = input ("Quel est votre nom ?")
+        return nom
         
 
 #Utilisation
 personne1 = Personne("Jean") #Je crée une personne
 personne2 = Personne ("Paul",15)
+personne3 = Personne()
 personne1.sepresenter()
 personne2.sepresenter()
+personne3.sepresenter()
 
 #personne1.nom = "toto" #<- on peut altérer la valeur d'une valeur de la classe en dehors du code
 #personne1.sepresenter()
