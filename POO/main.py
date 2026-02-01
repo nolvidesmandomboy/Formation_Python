@@ -18,6 +18,10 @@ class Personne:
 
     def sepresenter (self):
         print(f"Bonjour je m'appelle {self.nom}, j'ai {self.age} ans") 
+        if self.estmajeur():
+            print ("Je suis majeur")
+        else:
+            print ("je suis mineur")
 
     def estmajeur (self):
         if self.age >= 18:
