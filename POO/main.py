@@ -166,10 +166,13 @@ noms.append(input("nom de la personne 1 : "))
 noms.append(input("nom de la personne 2 : "))
 noms.append(input("nom de la personne 3 : "))
 
+print (noms)
+
 l = []
-
 for nom in noms:
-    l.append(Personne(nom))
+    l.append(f"personne{len(nom)}({nom})")
 
-for p in l:
-    print(p.SePresenter())
+print(l)
+
+#for p in l:
+    #print(p.SePresenter())
