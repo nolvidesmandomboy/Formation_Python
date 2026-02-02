@@ -159,20 +159,17 @@ class Personne:
 
     def SePresenter(self):
         print("Bonjour, je m'appelle " + self.nom)
+        return 
 
 # ---
 noms = []
-noms.append(input("nom de la personne 1 : "))
-noms.append(input("nom de la personne 2 : "))
-noms.append(input("nom de la personne 3 : "))
+for i in range (3):
+    noms.append(input(f"nom de la personne {i+1}: "))
 
 print (noms)
 
-l = []
-for nom in noms:
-    l.append(f"personne{len(nom)}({nom})")
+Personne(noms[1]).SePresenter()
 
-print(l)
-
-#for p in l:
-    #print(p.SePresenter())
+for p in range (len(noms)):
+    Personne(noms[p]).SePresenter()
+    print()
