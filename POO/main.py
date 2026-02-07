@@ -153,7 +153,7 @@ for i in liste_personnes:
 # POO EXERCICE DE MISE EN SITUATION 4
 
 # ---
-class Personne:
+'''class Personne:
     def __init__(self, nom: str):
         self.nom = nom
 
@@ -166,10 +166,9 @@ noms = []
 for i in range (3):
     noms.append(input(f"nom de la personne {i+1}: "))
 
-print (noms)
 
 Personne(noms[1]).SePresenter()
 
 for p in range (len(noms)):
     Personne(noms[p]).SePresenter()
-    print()
+    print()'''
