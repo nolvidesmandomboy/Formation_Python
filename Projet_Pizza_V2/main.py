@@ -29,5 +29,7 @@ pizza4 = Pizza ("Hawaïenne", 9.8, ("jambon", "ananas", "mozzarella","tomate"))
 pizza = (pizza1,pizza2,pizza3,pizza4)
 
 for pizzas in pizza :
-    if pizzas.not_vegetarienne :
+    """if pizzas.not_vegetarienne :
+        pizzas.afficher_infos()"""
+    if "tomate" in pizzas.ingredients:
         pizzas.afficher_infos()
