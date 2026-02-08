@@ -21,8 +21,11 @@ class PizzaPersonnalisee(Pizza):
     def __init__(self):
         super().__init__("Personnalisé", 0, ())
         self.demander_ingredients_a_l_utilisateur()
+        self.calculer_le_prix()
     
     def demander_ingredients_a_l_utilisateur(self):
+        self.prix_de_base = 5
+        self.prix_par_ingredients = 1.2
         while True : 
             self.ingredients = list(self.ingredients)
             ingredients = input("Ajouter un ingrédient (ou ENTER pour terminer) : ")
@@ -30,6 +33,11 @@ class PizzaPersonnalisee(Pizza):
                 return
             self.ingredients.append (ingredients)
             print (f"Vous avez {len(self.ingredients)} ingrédient(s) {', '.join(self.ingredients)}")
+
+    def calculer_le_prix(self):
+        prix_pizza_personnalisee = self.prix_de_base + self.prix_par_ingredients * len(self.ingredients)
+        self.prix = prix_pizza_personnalisee
+
 
 
 pizza1 = Pizza ("Reine", 9.2, ("jambon", "champignons", "mozzarella","tomate"))
