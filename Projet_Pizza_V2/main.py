@@ -14,7 +14,7 @@ class Pizza:
 
 pizza1 = Pizza ("Reine", 9.2, ("jambon", "champignons", "mozzarella"))
 
-pizza2 = Pizza ("Orientale", 10.0, ("merguez", "poivrons", "oignons", "mozzarella"))
+pizza2 = Pizza ("Orientale", 11.0, ("merguez", "poivrons", "oignons", "mozzarella"))
 
 pizza3 = Pizza ("Végétarienne", 9.5, ("courgettes", "aubergines", "poivrons", "mozzarella"))
 
