@@ -176,7 +176,7 @@ for p in range (len(noms)):
 class Etre_vivant:
     Espece_etre_vivant = "Espèce non identifié"
     def afficher_info_etre_vivant (self) :
-        print("La personne est de cette espèce : " + self.Espece_etre_vivant)
+        print("L'être vivant est de cette espèce : " + self.Espece_etre_vivant)
 
 
 class Personne (Etre_vivant): #<- permet de faire heriter cette classe d'une autre class, du coup elle va bénéficier du code de cette autre classe
@@ -207,11 +207,15 @@ class Personne (Etre_vivant): #<- permet de faire heriter cette classe d'une aut
         nom = input ("Nom de la personne : ")
         return nom
     
-    class chat (Etre_vivant):
-        Espece_etre_vivant = "Chat"
+class chat (Etre_vivant):
+    Espece_etre_vivant = "Chat"
         
     
-personne1  = Personne("Chloé",4)
-personne1.espece()
+personne1  = Personne("Chloé",14)
+personne1.sepresenter()
+personne1.afficher_info_etre_vivant()
 personne2 = Personne("jean")
-personne2.espece()
+personne2.sepresenter()
+personne2.afficher_info_etre_vivant()
+chat1 = chat()
+chat1.afficher_info_etre_vivant()
