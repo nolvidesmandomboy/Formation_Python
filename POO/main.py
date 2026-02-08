@@ -209,13 +209,23 @@ class Personne (Etre_vivant): #<- permet de faire heriter cette classe d'une aut
     
 class chat (Etre_vivant):
     Espece_etre_vivant = "Chat"
+
+class Etudiant (Personne):
+    def __init__(self, nom="", age=0,etudes=str):
+        self.etudes = etudes
+        super().__init__(nom, age,etudes)
+    
+    def sepresenter(self):
+        super().sepresenter()
+        print (f"Je fais des études en {self.etudes}")
         
     
 personne1  = Personne("Chloé",14)
 personne1.sepresenter()
 personne1.afficher_info_etre_vivant()
-personne2 = Personne("jean")
+'''personne2 = Personne("jean")
 personne2.sepresenter()
-personne2.afficher_info_etre_vivant()
+personne2.afficher_info_etre_vivant()'''
 chat1 = chat()
 chat1.afficher_info_etre_vivant()
+etudiant1 = Etudiant ("Tom",23,"commerces")
