@@ -17,6 +17,9 @@ class Pizza:
         print(f"ingrédients : {", ".join(self.ingredients)}")
         print()
 
+class PizzaPersonnalisee(Pizza):
+    def __init__(self, nom="", prix=0, ingredients=(), not_vegetarienne=True):
+        super().__init__(nom, prix, ingredients, not_vegetarienne)
 
 pizza1 = Pizza ("Reine", 9.2, ("jambon", "champignons", "mozzarella","tomate"))
 
@@ -34,6 +37,8 @@ def tri (e):
 pizza=list(pizza)
 pizza.sort(key=tri) #<- permet de faire un tri selon un critère personalisé
 
-for pizzas in pizza :
-    pizzas.afficher_infos()
+'''for pizzas in pizza :
+    pizzas.afficher_infos()'''
+
+
 
