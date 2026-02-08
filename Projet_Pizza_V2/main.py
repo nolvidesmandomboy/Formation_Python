@@ -29,7 +29,7 @@ class PizzaPersonnalisee(Pizza):
             if ingredients == "":
                 return
             self.ingredients.append (ingredients)
-            print (f"Vous avez {len(self.ingredients)} ingrédients")
+            print (f"Vous avez {len(self.ingredients)} ingrédient(s) {', '.join(self.ingredients)}")
 
 
 pizza1 = Pizza ("Reine", 9.2, ("jambon", "champignons", "mozzarella","tomate"))
