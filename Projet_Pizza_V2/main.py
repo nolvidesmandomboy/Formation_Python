@@ -20,6 +20,16 @@ class Pizza:
 class PizzaPersonnalisee(Pizza):
     def __init__(self):
         super().__init__("Personnalisé", 0, ())
+        self.demander_ingredients_a_l_utilisateur()
+    
+    def demander_ingredients_a_l_utilisateur(self):
+        while True : 
+            self.ingredients = list(self.ingredients)
+            ingredients = input("Ajouter un ingrédient (ou ENTER deux fois pour terminer) : ")
+            if ingredients == "":
+                return
+            self.ingredients.append (ingredients)
+
 
 pizza1 = Pizza ("Reine", 9.2, ("jambon", "champignons", "mozzarella","tomate"))
 
@@ -36,11 +46,11 @@ pizza = (pizza1,pizza2,pizza3,pizza4,pizzapersonalise)
 def tri (e):
     return e.nom
 
-#pizza=list(pizza)
+pizza=list(pizza)
 #pizza.sort(key=tri) #<- permet de faire un tri selon un critère personalisé
 
-'''for pizzas in pizza :
-    pizzas.afficher_infos()'''
+for pizzas in pizza :
+    pizzas.afficher_infos()
 
 
 
