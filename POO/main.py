@@ -172,9 +172,15 @@ Personne(noms[1]).SePresenter()
 for p in range (len(noms)):
     Personne(noms[p]).SePresenter()
     print()'''
+#Héritage 
+class Etre_vivant:
+    Espece_etre_vivant = "Espèce non identifié"
+    def afficher_info_etre_vivant (self) :
+        print("La personne est de cette espèce : " + self.Espece_etre_vivant)
 
-class Personne:
-    Espece_etre_vivant = "Humain"
+
+class Personne (Etre_vivant): #<- permet de faire heriter cette classe d'une autre class, du coup elle va bénéficier du code de cette autre classe
+    Espece_etre_vivant = "Humain" #<- il faut cependant garder les variables de classes pour différencier si besoin
     def __init__(self, nom="", age=0):
         self.nom = nom
         self.age = age 
@@ -201,8 +207,9 @@ class Personne:
         nom = input ("Nom de la personne : ")
         return nom
     
-    def espece (self) :
-        print("La personne est de cette espèce : " + self.Espece_etre_vivant)
+    class chat (Etre_vivant):
+        Espece_etre_vivant = "Chat"
+        
     
 personne1  = Personne("Chloé",4)
 personne1.espece()
