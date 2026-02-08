@@ -8,3 +8,4 @@ class Pizza:
 
     def afficher_infos (self):
         print(f"PIZZA {self.nom} : {self.prix}€ ")
+        print(f"ingrédients : {", ".join(self.ingredients)}")
