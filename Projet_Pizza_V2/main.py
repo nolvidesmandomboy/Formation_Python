@@ -25,7 +25,7 @@ class PizzaPersonnalisee(Pizza):
     def demander_ingredients_a_l_utilisateur(self):
         while True : 
             self.ingredients = list(self.ingredients)
-            ingredients = input("Ajouter un ingrédient (ou ENTER deux fois pour terminer) : ")
+            ingredients = input("Ajouter un ingrédient (ou ENTER pour terminer) : ")
             if ingredients == "":
                 return
             self.ingredients.append (ingredients)
