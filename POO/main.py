@@ -172,3 +172,39 @@ Personne(noms[1]).SePresenter()
 for p in range (len(noms)):
     Personne(noms[p]).SePresenter()
     print()'''
+
+class Personne:
+    Espece_etre_vivant = "Humain"
+    def __init__(self, nom="", age=0):
+        self.nom = nom
+        self.age = age 
+        if self.nom == "":
+            self.nom = self.demandernom()
+
+    def sepresenter (self):
+        info_personne = f"Bonjour je m'appelle {self.nom}"
+        if self.age == 0:
+             print (info_personne)
+        else:
+            print(f"{info_personne}, j'ai {self.age} ans")
+            if self.estmajeur():
+                print ("Je suis majeur")
+            else:
+                print ("je suis mineur")
+
+    def estmajeur (self):
+        if self.age >= 18:
+            return True
+        return False
+    
+    def demandernom (self):
+        nom = input ("Nom de la personne : ")
+        return nom
+    
+    def espece (self) :
+        print("La personne est de cette espèce : " + self.Espece_etre_vivant)
+    
+personne1  = Personne("Chloé",4)
+personne1.espece()
+personne2 = Personne("jean")
+personne2.espece()
