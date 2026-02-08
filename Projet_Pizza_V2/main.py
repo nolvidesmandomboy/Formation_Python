@@ -27,11 +27,13 @@ pizza3 = Pizza ("Végétarienne", 9.5, ("courgettes", "aubergines", "poivrons", 
 pizza4 = Pizza ("Hawaïenne", 9.8, ("jambon", "ananas", "mozzarella","tomate"))
 
 pizza = (pizza1,pizza2,pizza3,pizza4)
+    
+def tri (e):
+    return e.nom
+
+pizza=list(pizza)
+pizza.sort(key=tri) #<- permet de faire un tri selon un critère personalisé
 
 for pizzas in pizza :
-    """if pizzas.not_vegetarienne :
-        pizzas.afficher_infos()"""
-    '''if "tomate" in pizzas.ingredients:
-        pizzas.afficher_infos()'''
-    if pizzas.prix < 10:
-        pizzas.afficher_infos()
+    pizzas.afficher_infos()
+
