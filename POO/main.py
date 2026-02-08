@@ -212,11 +212,11 @@ class chat (Etre_vivant):
 
 class Etudiant (Personne):
     def __init__(self, nom="", age=0,etudes=""):
-        super().__init__(nom, age)
+        super().__init__(nom, age)#<- permet de récupérer l'init de la class parent et ensuite de faire l'init de la classe enfant (ici la classe Etudiant)
         self.etudes = etudes
     
     def sepresenter(self):
-        super().sepresenter()
+        super().sepresenter() #<- permet de récuperer le code de la class parent et d'écrire le code à la suite pour qu'il soit éxécuté sans être écrasé
         print (f"Je fais des études en {self.etudes}")
         
     
