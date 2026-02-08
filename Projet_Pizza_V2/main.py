@@ -31,5 +31,7 @@ pizza = (pizza1,pizza2,pizza3,pizza4)
 for pizzas in pizza :
     """if pizzas.not_vegetarienne :
         pizzas.afficher_infos()"""
-    if "tomate" in pizzas.ingredients:
+    '''if "tomate" in pizzas.ingredients:
+        pizzas.afficher_infos()'''
+    if pizzas.prix < 10:
         pizzas.afficher_infos()
