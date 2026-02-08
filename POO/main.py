@@ -174,9 +174,15 @@ for p in range (len(noms)):
     print()'''
 #Héritage 
 class Etre_vivant:
-    Espece_etre_vivant = "Espèce non identifié"
-    def afficher_info_etre_vivant (self) :
-        print("L'être vivant est de cette espèce : " + self.Espece_etre_vivant)
+    Espece_etre_vivant = "Espèce non identifiée"
+
+    def afficher_info_etre_vivant(self):
+        # Si l'objet possède un attribut 'nom' et qu'il n'est pas vide
+        if hasattr(self, "nom") and self.nom != "": #<- le "hasattr" permet de savoir si un object a un attribut (retourne True si oui False si non) donc ici, on cherche à savoir si self a un attribut "nom"
+            print(f"{self.nom} est de l'espèce : {self.Espece_etre_vivant}")
+        else:
+            print("L'être vivant est de cette espèce : " + self.Espece_etre_vivant)
+
 
 
 class Personne (Etre_vivant): #<- permet de faire heriter cette classe d'une autre class, du coup elle va bénéficier du code de cette autre classe
