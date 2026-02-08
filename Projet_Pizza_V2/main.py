@@ -18,8 +18,8 @@ class Pizza:
         print()
 
 class PizzaPersonnalisee(Pizza):
-    def __init__(self, nom="", prix=0, ingredients=(), not_vegetarienne=True):
-        super().__init__(nom, prix, ingredients, not_vegetarienne)
+    def __init__(self):
+        super().__init__("Personnalisé", 0, ())
 
 pizza1 = Pizza ("Reine", 9.2, ("jambon", "champignons", "mozzarella","tomate"))
 
