@@ -20,7 +20,7 @@ class Pizza:
 class PizzaPersonnalisee(Pizza):
     def __init__(self, numero_de_pizza=int):
         self.numero_de_pizza = numero_de_pizza
-        super().__init__(f"Personnalisée {numero_de_pizza}", 0, ())
+        super().__init__(f"Personnalisée n°{numero_de_pizza}", 0, ())
         self.demander_ingredients_a_l_utilisateur()
         self.calculer_le_prix()
     
