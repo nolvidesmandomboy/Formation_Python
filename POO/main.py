@@ -271,7 +271,7 @@ e = [EtreVivant(),Chat(),Personne()]
 for l in e : 
     l.afficher_infos() #<- on peut mettre plusieurs classe dans une même liste et appeler une méthode commune à ceux-ci, ça s'appelle le polymorphisqme.'''
 
-#Copie d'objets
+#Copie d'objets et __str__
 
 class Personne:
     def __init__(self, nom, age):
@@ -284,11 +284,16 @@ class Personne:
     def __eq__ (self,other):
         return self.nom == other.nom and self.age == other.age
     
+    def __str__(self): #<- cette fonction permets de retourner sous forme de chaîne de caractère les éléments que l'on souhaite lorsqu'on appelle directement l'objet sans appeler des méthodes
+        return str(self.__dict__)
+    
 personne1 = Personne ("Jean", 20)
 personne1.afficher_infos()
 
 personne2 = copy.copy(personne1) #copy.copy permet de faire une copie des éléments d'un objet dans un autre objet, même si on modifie l'objet original, la copie sera aussi modifiée 
 personne2.afficher_infos()
+
+print (personne2)
 
 print (personne1 == personne2)
 print (personne1 is personne2)
