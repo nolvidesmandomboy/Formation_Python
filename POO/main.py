@@ -172,8 +172,9 @@ Personne(noms[1]).SePresenter()
 for p in range (len(noms)):
     Personne(noms[p]).SePresenter()
     print()'''
+
 #Héritage 
-class Etre_vivant:
+'''class Etre_vivant:
     Espece_etre_vivant = "Espèce non identifiée"
 
     def afficher_info_etre_vivant(self):
@@ -228,11 +229,13 @@ class Etudiant (Personne):
     
 personne1  = Personne("Chloé",14)
 personne1.sepresenter()
-personne1.afficher_info_etre_vivant()
+personne1.afficher_info_etre_vivant()'''
 '''personne2 = Personne("jean")
 personne2.sepresenter()
 personne2.afficher_info_etre_vivant()'''
-chat1 = chat()
+'''chat1 = chat()
 chat1.afficher_info_etre_vivant()
 etudiant1 = Etudiant ("Tom",23,"commerces")
-etudiant1.sepresenter()
+etudiant1.sepresenter()'''
+
+#Isinstance
