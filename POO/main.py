@@ -239,3 +239,14 @@ etudiant1 = Etudiant ("Tom",23,"commerces")
 etudiant1.sepresenter()'''
 
 #Isinstance
+class Personne:
+    def __init__(self, nom, age):
+        self.nom = nom
+        self.age= age
+
+        if not isinstance(age, int): # if isinstance(var,type) permet d'interroger si la variable var est du type qu'on a rentrer en paramètre
+            print("l'âge doit être une nombre") #<- si on laisse comme ça, ça va s'afficher mais on aura toujours une erreur en lançant le programme, pour ne pas avoir d'erreur il faudra remmettre l'âge à 0 par exemple
+            self.age = 0
+    
+    def afficher_infos(self):
+        print(f"je m'appelle {self.nom}, j'ai {self.age}")
