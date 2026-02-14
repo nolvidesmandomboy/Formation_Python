@@ -1,3 +1,4 @@
+import copy #<- c'est ça qui permettra de faire des copies 
 #Programmation impérative
 
 '''def afficher_infos_personne (nom,age):
@@ -286,7 +287,7 @@ class Personne:
 personne1 = Personne ("Jean", 20)
 personne1.afficher_infos()
 
-personne2 = Personne("Jean",20)
+personne2 = copy.copy(personne1) #copy.copy permet de faire une copie des éléments d'un objet dans un autre objet, même si on modifie l'objet original, la copie sera aussi modifiée 
 personne2.afficher_infos()
 
 print (personne1 == personne2)
