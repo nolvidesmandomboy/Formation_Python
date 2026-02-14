@@ -279,3 +279,17 @@ class Personne:
     
     def afficher_infos(self):
         print(f"je m'appelle {self.nom}, j'ai {self.age}")
+    
+    def __eq__ (self,other):
+        return self.nom == other.nom and self.age == other.age
+    
+personne1 = Personne ("Jean", 20)
+personne1.afficher_infos()
+
+personne2 = Personne("Jean",20)
+personne2.afficher_infos()
+
+print (personne1 == personne2)
+print (personne1 is personne2)
+
+print (personne1.__dict__ == personne2.__dict__)
