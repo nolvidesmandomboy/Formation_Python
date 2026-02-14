@@ -239,7 +239,7 @@ etudiant1 = Etudiant ("Tom",23,"commerces")
 etudiant1.sepresenter()'''
 
 #Isinstance
-class Personne:
+'''class Personne:
     def __init__(self, nom, age):
         self.nom = nom
         self.age= age
@@ -249,4 +249,6 @@ class Personne:
             self.age = 0
     
     def afficher_infos(self):
-        print(f"je m'appelle {self.nom}, j'ai {self.age}")
+        print(f"je m'appelle {self.nom}, j'ai {self.age}")'''
+
+#Polymorphisme
