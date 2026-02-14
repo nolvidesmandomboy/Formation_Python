@@ -262,4 +262,10 @@ class Chat (EtreVivant):
         print("je suis un chat")
 
 class Personne (EtreVivant):
-    print("je suis une personne")
+    def afficher_infos(self):
+        print("je suis une personne")
+
+e = [EtreVivant(),Chat(),Personne()]
+
+for l in e : 
+    l.afficher_infos()
