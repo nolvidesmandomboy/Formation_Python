@@ -46,7 +46,7 @@ class Question:
         
 
     def demander_reponse_numerique_utlisateur(self,min, max):
-        reponse_str = input("Votre réponse (entre " + str(min) + " et " + str(max) + ") :")
+        reponse_str = input("Votre réponse (entre " + str(min) + " et " + str(max) + ") : ")
         try:
             reponse_int = int(reponse_str)
             if min <= reponse_int <= max:
@@ -56,7 +56,18 @@ class Question:
         except:
             print("ERREUR : Veuillez rentrer uniquement des chiffres")
         return self.demander_reponse_numerique_utlisateur(min, max)
+
+class Questionnaire:
+    def __init__(self, questions=[]):
+        self.question = questions
     
+    def lancer_questionnaire(self):
+        score = 0
+        for question in self.question:
+            if question.poser_question():
+                score += 1
+        print("Score final :", score, "sur", len(self.question))
+        
 
 '''
 titre = question[0]
@@ -75,13 +86,6 @@ bonne_reponse = question[2]
 
 '''
 
-def lancer_questionnaire(questionnaire):
-    score = 0
-    for question in questionnaire:
-        if poser_question(question):
-            score += 1
-    print("Score final :", score, "sur", len(questionnaire))
-
 questionnaire = (
     ("Quelle est la capitale de la France ?", ("Marseille", "Nice", "Paris", "Nantes", "Lille"), "Paris"), 
     ("Quelle est la capitale de l'Italie ?", ("Rome", "Venise", "Pise", "Florence"), "Rome"),
@@ -91,4 +95,8 @@ questionnaire = (
 #lancer_questionnaire(questionnaire)
  
 q1 = Question("Quelle est la capitale de la France ?", ("Marseille", "Nice", "Paris", "Nantes", "Lille"), "Paris")
-q1.poser_question()
+q2 = Question("Quelle est la capitale de l'Italie ?", ("Rome", "Venise", "Pise", "Florence"), "Rome")
+#q1.poser_question()
+liste_de_questions = [q1,q2]
+questionnaire1 = Questionnaire (liste_de_questions)
+questionnaire1.lancer_questionnaire()
