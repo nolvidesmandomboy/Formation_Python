@@ -79,5 +79,6 @@ questionnaire = (
                 )
 
 lancer_questionnaire(questionnaire)
-
+ 
+# Classe questionnaire, avec constructeur prenant en paramètre question, réponse proposés et réponses correctes. Puis
 
