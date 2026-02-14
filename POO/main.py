@@ -252,3 +252,14 @@ etudiant1.sepresenter()'''
         print(f"je m'appelle {self.nom}, j'ai {self.age}")'''
 
 #Polymorphisme
+
+class EtreVivant:
+    def afficher_infos(self):
+        print("Je suis un être vivant")
+
+class Chat (EtreVivant):
+    def afficher_infos(self):
+        print("je suis un chat")
+
+class Personne (EtreVivant):
+    print("je suis une personne")
