@@ -67,36 +67,10 @@ class Questionnaire:
             if question.poser_question():
                 score += 1
         print("Score final :", score, "sur", len(self.question))
-        
-
-'''
-titre = question[0]
-choix = question[1]
-bonne_reponse = question[2]
-'''
-
-
-
-'''
-    questionnaire[]
-        question
-            titre = "Quelle est la capitale de la France ?"
-            reponses = ("Marseille", "Nice", "Paris", "Nantes")
-            bonne_reponse = "Paris"
-
-'''
-
-questionnaire = (
-    ("Quelle est la capitale de la France ?", ("Marseille", "Nice", "Paris", "Nantes", "Lille"), "Paris"), 
-    ("Quelle est la capitale de l'Italie ?", ("Rome", "Venise", "Pise", "Florence"), "Rome"),
-    ("Quelle est la capitale de la Belgique ?", ("Anvers", "Bruxelles", "Bruges", "Liège"), "Bruxelles")
-                )
-
-#lancer_questionnaire(questionnaire)
  
 q1 = Question("Quelle est la capitale de la France ?", ("Marseille", "Nice", "Paris", "Nantes", "Lille"), "Paris")
 q2 = Question("Quelle est la capitale de l'Italie ?", ("Rome", "Venise", "Pise", "Florence"), "Rome")
-#q1.poser_question()
+q2 = Question("Quelle est la capitale de la Belgique ?", ("Anvers", "Bruxelles", "Bruges", "Liège"), "Bruxelles")
 liste_de_questions = [q1,q2]
 questionnaire1 = Questionnaire (liste_de_questions)
 questionnaire1.lancer_questionnaire()
