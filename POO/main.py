@@ -253,7 +253,7 @@ etudiant1.sepresenter()'''
 
 #Polymorphisme
 
-class EtreVivant:
+'''class EtreVivant:
     def afficher_infos(self):
         print("Je suis un être vivant")
 
@@ -268,4 +268,14 @@ class Personne (EtreVivant):
 e = [EtreVivant(),Chat(),Personne()]
 
 for l in e : 
-    l.afficher_infos() #<- on peut mettre plusieurs classe dans une même liste et appeler une méthode commune à ceux-ci, ça s'appelle le polymorphisqme.
+    l.afficher_infos() #<- on peut mettre plusieurs classe dans une même liste et appeler une méthode commune à ceux-ci, ça s'appelle le polymorphisqme.'''
+
+#Copie d'objets
+
+class Personne:
+    def __init__(self, nom, age):
+        self.nom = nom
+        self.age= age
+    
+    def afficher_infos(self):
+        print(f"je m'appelle {self.nom}, j'ai {self.age}")
