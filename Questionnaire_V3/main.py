@@ -1,92 +1,83 @@
-print ("Bienvenue dans ce questionnaire :), répondez au question avec la lettre correspondant aux propositions\n")
+# LES FONCTIONS : PROJET QUESTIONNAIRE
+#
+# Question : Quelle est la capitale de la France ?
+# (a) Marseille
+# (b) Nice
+# (c) Paris
+# (d) Nantes
+#
+# Votre réponse :
+# Bonne réponse / Mauvaise réponse
 
-''''
-#fonction de Gestion d'erreur 
-def demander_reponse_numerique_utilisateur (min,max):
-    reponse_str = input (f"Votre réponse (entre {min} et {max}): ")
-    try :
+# ...
+# Question : Quelle est la capitale de l'Italie ?
+# ...
+#
+# 4 questions
+
+
+def demander_reponse_numerique_utlisateur(min, max):
+    reponse_str = input("Votre réponse (entre " + str(min) + " et " + str(max) + ") :")
+    try:
         reponse_int = int(reponse_str)
         if min <= reponse_int <= max:
             return reponse_int
-        
-        print(f"ERREUR vous devez rentrer un nombre entre {min} et {max}")
-        
+
+        print("ERREUR : Vous devez rentrer un nombre entre", min, "et", max)
     except:
-        print()
-    return demander_reponse_numerique_utilisateur(min,max)'''
+        print("ERREUR : Veuillez rentrer uniquement des chiffres")
+    return demander_reponse_numerique_utlisateur(min, max)
+    
 
-def afficher_question (question):
-    global score #permet d'integrer la variable du programme principale dans la fonction sans la rentrer en parametre 
+'''
+titre = question[0]
+choix = question[1]
+bonne_reponse = question[2]
+'''
+def poser_question(question):
+    # titre_question, r1, r2, r3, r4, choix_bonne_reponse
+    choix = question[1]
+    bonne_reponse = question[2]
+    print("QUESTION")
+    print("  " + question[0])
+    for i in range(len(choix)):
+        print("  ", i+1, "-", choix[i])
 
-    titre_question = question[0]
-    choix_reponses = question[1]
-    reponse_correcte = question[2]
-
-    print (titre_question)
-    #print (f"{choix_reponses[0]}\n{choix_reponses[1]}\n{choix_reponses[2]}\n{choix_reponses[3]}")
-
-    for choix  in range(0, len(choix_reponses)) :
-        print (f"{choix + 1}) {choix_reponses [choix]}")
-
-    reponse_utilisateur_str = input (f"Votre réponse (entre 1 et {len(choix_reponses)}): ")
-    try :
-        reponse_utilisateur_str = int (reponse_utilisateur_str)
-        reponse_utilisateur_int = int(reponse_utilisateur_str)
-        if choix_reponses[reponse_utilisateur_int-1].lower() == reponse_correcte.lower() :
-                score = score + 1
-                print ("Bien joué ! réponse correcte\n")
-                return
-        else:
-            print ("réponse incorrecte\n")
-    except :
-        if reponse_utilisateur_str.lower() == reponse_correcte.lower(): 
-            print ("Bien joué ! réponse correcte\n")
-            score = score + 1
-            return
-        else:
-            print ("réponse incorrecte\n")
+    print()
+    resultat_response_correcte = False
+    reponse_int = demander_reponse_numerique_utlisateur(1, len(choix))
+    if choix[reponse_int-1].lower() == bonne_reponse.lower():
+        print("Bonne réponse")
+        resultat_response_correcte = True
+    else:
+        print("Mauvaise réponse")
         
-score = 0
+    print()
+    return resultat_response_correcte
 
-question1 = (
-    "Quelle est la capitale de France ?",
-    ("Paris", "Nairobi", "Copenhague", "Madrid"),
-    "Paris"
-)
 
-question2 = (
-    "Comment s'appelle le président actuel de la France ?",
-    ("Paul Biya", "Theodoro Obiang Nguema Mbasogo", "Macron", "Trump"),
-    "Macron"
-)
+'''
+    questionnaire[]
+        question
+            titre = "Quelle est la capitale de la France ?"
+            reponses = ("Marseille", "Nice", "Paris", "Nantes")
+            bonne_reponse = "Paris"
 
-question3 = (
-    "Quel manga connu dans le monde entier a été créé par Masashi Kishimoto ?",
-    ("Berserk", "Naruto", "My Hero Academia", "DBZ"),
-    "Naruto"
-)
+'''
 
-question4 = (
-    "Quelle planète est la plus proche du Soleil ?",
-    ("Mercure", "Vénus", "Mars", "Jupiter"),
-    "Mercure"
-)
+def lancer_questionnaire(questionnaire):
+    score = 0
+    for question in questionnaire:
+        if poser_question(question):
+            score += 1
+    print("Score final :", score, "sur", len(questionnaire))
 
-question5 = (
-    "Qui a peint la Joconde ?",
-    ("Vincent Van Gogh", "Pablo Picasso", "Léonard de Vinci", "Claude Monet"),
-    "Léonard de Vinci"
-)
+questionnaire = (
+    ("Quelle est la capitale de la France ?", ("Marseille", "Nice", "Paris", "Nantes", "Lille"), "Paris"), 
+    ("Quelle est la capitale de l'Italie ?", ("Rome", "Venise", "Pise", "Florence"), "Rome"),
+    ("Quelle est la capitale de la Belgique ?", ("Anvers", "Bruxelles", "Bruges", "Liège"), "Bruxelles")
+                )
 
-question6 = (
-    "Quel langage est principalement utilisé pour le développement web côté serveur ?",
-    ("HTML", "CSS", "Python", "JavaScript"),
-    "Python"
-)
+lancer_questionnaire(questionnaire)
 
-questionnaire = [question1,question2,question3,question4,question5,question6]
 
-for question in questionnaire :
-     afficher_question (question)
-
-print (f"votre score est de {score}")
