@@ -15,8 +15,37 @@
 #
 # 4 questions
 
+class Question:
+    def __init__(self, titre_question=str,choix_reponses=(),bonne_reponse=str):
+        self.__titre_question__ = titre_question
+        self.choixreponses = choix_reponses
+        self.__bonne_reponse__ = bonne_reponse
+    
+    def poser_question(self):
+        print("QUESTION")
+        print("  " + self.__titre_question__)
+        for i in range(len(self.choixreponses)):
+            print("  ", i+1, "-", self.choixreponses[i])
 
-def demander_reponse_numerique_utlisateur(min, max):
+        print()
+        resultat_response_correcte = False
+        #reponse_int = demander_reponse_numerique_utlisateur(1, len(choix))
+        numero = []
+        for i in range (0,len(self.choixreponses)):
+            numero.append(i+1)
+        reponse = input(f"Votre réponse entre {min(numero)} et {max(numero)} : ")
+        reponse_int = int(reponse)
+        if self.choixreponses[reponse_int-1].lower() == self.__bonne_reponse__.lower():
+            print("Bonne réponse")
+            resultat_response_correcte = True
+        else:
+            print("Mauvaise réponse")
+            
+        print()
+        return resultat_response_correcte
+        
+
+'''def demander_reponse_numerique_utlisateur(min, max):
     reponse_str = input("Votre réponse (entre " + str(min) + " et " + str(max) + ") :")
     try:
         reponse_int = int(reponse_str)
@@ -26,7 +55,7 @@ def demander_reponse_numerique_utlisateur(min, max):
         print("ERREUR : Vous devez rentrer un nombre entre", min, "et", max)
     except:
         print("ERREUR : Veuillez rentrer uniquement des chiffres")
-    return demander_reponse_numerique_utlisateur(min, max)
+    return demander_reponse_numerique_utlisateur(min, max)'''
     
 
 '''
@@ -34,26 +63,7 @@ titre = question[0]
 choix = question[1]
 bonne_reponse = question[2]
 '''
-def poser_question(question):
-    # titre_question, r1, r2, r3, r4, choix_bonne_reponse
-    choix = question[1]
-    bonne_reponse = question[2]
-    print("QUESTION")
-    print("  " + question[0])
-    for i in range(len(choix)):
-        print("  ", i+1, "-", choix[i])
 
-    print()
-    resultat_response_correcte = False
-    reponse_int = demander_reponse_numerique_utlisateur(1, len(choix))
-    if choix[reponse_int-1].lower() == bonne_reponse.lower():
-        print("Bonne réponse")
-        resultat_response_correcte = True
-    else:
-        print("Mauvaise réponse")
-        
-    print()
-    return resultat_response_correcte
 
 
 '''
@@ -78,7 +88,7 @@ questionnaire = (
     ("Quelle est la capitale de la Belgique ?", ("Anvers", "Bruxelles", "Bruges", "Liège"), "Bruxelles")
                 )
 
-lancer_questionnaire(questionnaire)
+#lancer_questionnaire(questionnaire)
  
-# Classe questionnaire, avec constructeur prenant en paramètre question, réponse proposés et réponses correctes. Puis
-
+q1 = Question("Quelle est la capitale de la France ?", ("Marseille", "Nice", "Paris", "Nantes", "Lille"), "Paris")
+q1.poser_question()
