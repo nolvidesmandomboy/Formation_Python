@@ -268,4 +268,4 @@ class Personne (EtreVivant):
 e = [EtreVivant(),Chat(),Personne()]
 
 for l in e : 
-    l.afficher_infos()
+    l.afficher_infos() #<- on peut mettre plusieurs classe dans une même liste et appeler une méthode commune à ceux-ci, ça s'appelle le polymorphisqme.
