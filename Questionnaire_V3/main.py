@@ -1,19 +1,4 @@
-# LES FONCTIONS : PROJET QUESTIONNAIRE
-#
-# Question : Quelle est la capitale de la France ?
-# (a) Marseille
-# (b) Nice
-# (c) Paris
-# (d) Nantes
-#
-# Votre réponse :
-# Bonne réponse / Mauvaise réponse
-
-# ...
-# Question : Quelle est la capitale de l'Italie ?
-# ...
-#
-# 4 questions
+# LES FONCTIONS : PROJET QUESTIONNAIRE V3
 
 class Question:
     def __init__(self, titre_question=str,choix_reponses=(),bonne_reponse=str):
