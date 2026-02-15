@@ -3,8 +3,8 @@ p = "je m'appelle Nolvides Victorin et je suis Kinésithérapeute"
 
 def get_min_and_max_words (sentense):
     sentense = sentense.split()
-    motlepluslong = sentense[0]
-    motlepluscourt = sentense[0]
+    motlepluslong = ""
+    motlepluscourt = ""
     listtriee = [len(i) for i in sentense]
     nb_max = max(listtriee)
     nb_min = print (min(listtriee))
