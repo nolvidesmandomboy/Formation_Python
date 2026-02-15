@@ -1,0 +1,1 @@
+s = "un chasseur sachant chasser sait chasser sans son chien"
