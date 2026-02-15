@@ -10,3 +10,6 @@ def reverse (variable):
 
 reverse (s)
 reverse(a)
+
+# Autre manière de faire :
+print (s[::-1])
