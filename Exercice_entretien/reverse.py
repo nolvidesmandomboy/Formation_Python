@@ -1,9 +1,12 @@
 s = "Bonjour toto"
+a = "Nolvides"
 def reverse (variable):
     tab = []
     for i in range (1,len(variable)+1):
         tab.append(variable[-i])
-        yes = "".join(tab)
-    print(yes)
+        valeurinversee = "".join(tab)
+    print (valeurinversee)
+    return valeurinversee
 
 reverse (s)
+reverse(a)
