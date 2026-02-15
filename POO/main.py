@@ -1,3 +1,4 @@
+import copy #<- c'est ça qui permettra de faire des copies 
 #Programmation impérative
 
 '''def afficher_infos_personne (nom,age):
@@ -172,8 +173,9 @@ Personne(noms[1]).SePresenter()
 for p in range (len(noms)):
     Personne(noms[p]).SePresenter()
     print()'''
+
 #Héritage 
-class Etre_vivant:
+'''class Etre_vivant:
     Espece_etre_vivant = "Espèce non identifiée"
 
     def afficher_info_etre_vivant(self):
@@ -228,11 +230,101 @@ class Etudiant (Personne):
     
 personne1  = Personne("Chloé",14)
 personne1.sepresenter()
-personne1.afficher_info_etre_vivant()
+personne1.afficher_info_etre_vivant()'''
 '''personne2 = Personne("jean")
 personne2.sepresenter()
 personne2.afficher_info_etre_vivant()'''
-chat1 = chat()
+'''chat1 = chat()
 chat1.afficher_info_etre_vivant()
 etudiant1 = Etudiant ("Tom",23,"commerces")
-etudiant1.sepresenter()
+etudiant1.sepresenter()'''
+
+#Isinstance
+'''class Personne:
+    def __init__(self, nom, age):
+        self.nom = nom
+        self.age= age
+
+        if not isinstance(age, int): # if isinstance(var,type) permet d'interroger si la variable var est du type qu'on a rentrer en paramètre
+            print("l'âge doit être une nombre") #<- si on laisse comme ça, ça va s'afficher mais on aura toujours une erreur en lançant le programme, pour ne pas avoir d'erreur il faudra remmettre l'âge à 0 par exemple
+            self.age = 0
+    
+    def afficher_infos(self):
+        print(f"je m'appelle {self.nom}, j'ai {self.age}")'''
+
+#Polymorphisme
+
+'''class EtreVivant:
+    def afficher_infos(self):
+        print("Je suis un être vivant")
+
+class Chat (EtreVivant):
+    def afficher_infos(self):
+        print("je suis un chat")
+
+class Personne (EtreVivant):
+    def afficher_infos(self):
+        print("je suis une personne")
+
+e = [EtreVivant(),Chat(),Personne()]
+
+for l in e : 
+    l.afficher_infos() #<- on peut mettre plusieurs classe dans une même liste et appeler une méthode commune à ceux-ci, ça s'appelle le polymorphisqme.'''
+
+#Copie d'objets et __str__
+
+'''class Personne:
+    def __init__(self, nom, age):
+        self.nom = nom
+        self.age= age
+    
+    def afficher_infos(self):
+        print(f"je m'appelle {self.nom}, j'ai {self.age}")
+    
+    def __eq__ (self,other):
+        return self.nom == other.nom and self.age == other.age
+    
+    def __str__(self): #<- cette fonction permets de retourner sous forme de chaîne de caractère les éléments que l'on souhaite lorsqu'on appelle directement l'objet sans appeler des méthodes
+        return str(self.__dict__)
+    
+personne1 = Personne ("Jean", 20)
+personne1.afficher_infos()
+
+personne2 = copy.copy(personne1) #copy.copy permet de faire une copie des éléments d'un objet dans un autre objet, même si on modifie l'objet original, la copie sera aussi modifiée 
+personne2.afficher_infos()
+
+print (personne2)
+
+print (personne1 == personne2)
+print (personne1 is personne2)
+
+print (personne1.__dict__ == personne2.__dict__)'''
+
+# Méthodes d’instance, de classe et statiques
+
+'''class Personne:
+    TYPE = "Humain"
+    def __init__(self, nom):
+        self.nom = nom
+
+    # Méthode d'instance
+    def se_presenter(self):
+        print(f"Je m'appelle {self.formater_chaine(self.nom)} - " + self.TYPE)
+
+    # premier charactère en majuscule puis minuscules
+    # méthode statique
+    @staticmethod
+    def formater_chaine(a):
+        return a[0].upper() + a[1:].lower()
+
+    @classmethod
+    def methode_de_classe(cls):
+        print("Méthode de classe : " + cls.TYPE)
+
+
+personne1 = Personne("jean")
+personne1.se_presenter()
+
+print(Personne.formater_chaine("toTo"))
+
+Personne.methode_de_classe()'''
