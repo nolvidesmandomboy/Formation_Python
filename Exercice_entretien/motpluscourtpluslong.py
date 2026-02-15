@@ -7,15 +7,14 @@ def get_min_and_max_words (sentense):
     motlepluscourt = ""
     listtriee = [len(i) for i in sentense]
     nb_max = max(listtriee)
-    nb_min = print (min(listtriee))
+    nb_min = min(listtriee)
     for w in sentense :
         if len(w) == nb_max:
             motlepluslong = w
-        elif len(w) == nb_min:
+        if len(w) == nb_min:
             motlepluscourt = w
-    print ("mot le plus long : " + motlepluslong)
-    print ("mot le plus court : " + motlepluscourt)
     return motlepluslong, motlepluscourt
 
-get_min_and_max_words(s)
-get_min_and_max_words(p)
+maxword, min_word = get_min_and_max_words(s)
+print ("mot le plus long : " + maxword)
+print ("mot le plus court : " + min_word)
