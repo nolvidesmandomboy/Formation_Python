@@ -1,4 +1,6 @@
 s = "un chasseur sachant chasser sait chasser sans son chien"
+p = "je m'appelle Nolvides Victorin et je suis Kinésithérapeute"
+
 def get_min_and_max_words (sentense):
     sentense = sentense.split()
     motlepluslong = sentense[0]
@@ -16,3 +18,4 @@ def get_min_and_max_words (sentense):
     return motlepluslong, motlepluscourt
 
 get_min_and_max_words(s)
+get_min_and_max_words(p)
