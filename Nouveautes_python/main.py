@@ -22,7 +22,7 @@ removeprefix ou removesuffix permettent de retirer des mots au début ou à la f
 
 #Switch Case / Match Case
 
-while True :
+'''while True :
     phrase = input ("Parlez-moi : ")
     if phrase == "Bonjour":
         phrase = input ("Bonjour comment allez-vous ? ")
@@ -33,4 +33,17 @@ while True :
         phrase == "Au revoir"
         break
     else:
-        print("Je n'ai pas compris")
+        print("Je n'ai pas compris")'''
+
+while True:
+    phrase = input("parlez-moi")
+    match phrase:
+        case "Bonjour" | "Hello" | "salut" :
+            print("Bonjour comment allez-vous ?")
+        case "bien" | "ça va ?":
+            print("Je viens bien et vous ?")
+        case "bye":
+            print("Au revoir")
+            break
+        case _: #<- le underscore ici représente le "Else de la condition if précédente, et englobe donc tous les autres cas"
+            print("Je n'ai pas compris")
