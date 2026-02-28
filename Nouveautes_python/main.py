@@ -22,11 +22,15 @@ removeprefix ou removesuffix permettent de retirer des mots au début ou à la f
 
 #Switch Case / Match Case
 
-phrase = input ("Parlez-moi : ")
-if phrase == "Bonjour":
-    phrase = input ("Bonjour comment allez-vous ? ")
-    print ("Passez une bonne journée !")
-elif phrase == "ça va ?":
-    phrase = input ("ça va bien et vous ?")
-else:
-    print("Je n'ai pas compris")
+while True :
+    phrase = input ("Parlez-moi : ")
+    if phrase == "Bonjour":
+        phrase = input ("Bonjour comment allez-vous ? ")
+        print ("Passez une bonne journée !")
+    elif phrase == "ça va ?":
+        phrase = input ("ça va bien et vous ?")
+    elif phrase == "Bye":
+        phrase == "Au revoir"
+        break
+    else:
+        print("Je n'ai pas compris")
