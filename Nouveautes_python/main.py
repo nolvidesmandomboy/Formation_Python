@@ -8,3 +8,12 @@ dict1.update(dict2) #<- la fonction update ici permet d'agreger le contenu d'un 
 print(dict1)
 repectoire_complet = dict1 | dict2 #<- permet de concatener les deux dictionnaires directement 
 print (repectoire_complet)
+
+#Supprimer le suffixe ou le préfixe d'une phrase 
+
+phrase = "Emilie a mangé un gateau"
+print(phrase.removeprefix("Emilie"))
+print(phrase.removesuffix("gateau"))
+'''
+removeprefix ou removesuffix permettent de retirer des mots au début ou à la fin d'une phrase dans une chaîne de caractères
+'''
