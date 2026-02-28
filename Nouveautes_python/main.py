@@ -51,3 +51,11 @@ removeprefix ou removesuffix permettent de retirer des mots au début ou à la f
 #Nouvel exemple
 personne1 = {"nom":"Paul","infos":(20,"Ingénieur")}
 personne2 = {"nom" : "Marc", "age" : 30} #Ici on a donc deux données qu'on imagine issue d'une base de données contenant certaines données similaires mais stucturés différemment
+personnes = (personne1,personne2)
+
+for personnes in personnes:
+    match personnes:
+        case {"nom" : nom, "infos" : (age,metier)}: #<- ici on mets dans le case la forme qui corresponds à la condition (ici un dictionnaire), puis la clé que le dictionnaire doit doit avoir et les variables qui doivent être ressortie. Ici, si le dictionnaire a une clé "nom", on stocke la donnée dans une variable "nom"
+            print(f"{nom}, {age} ans, {metier}")
+        case _:
+            print("format non supporté")
