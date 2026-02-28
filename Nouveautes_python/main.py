@@ -57,5 +57,11 @@ for personnes in personnes:
     match personnes:
         case {"nom" : nom, "infos" : (age,metier)}: #<- ici on mets dans le case la forme qui corresponds à la condition (ici un dictionnaire), puis la clé que le dictionnaire doit doit avoir et les variables qui doivent être ressortie. Ici, si le dictionnaire a une clé "nom", on stocke la donnée dans une variable "nom"
             print(f"{nom}, {age} ans, {metier}")
+        case {"nom" : nom, "age" : age}: 
+            print(f"{nom}, {age} ans")
         case _:
             print("format non supporté")
+
+'''
+Faut faire attention à l'ordre des Cases, parce que si dans notre exemple on avait un cas ou il y avait le nom, l'age et le metier en plus, mais qu'on avait mis la condition du cas de l'age et du nom en premier et en deuxième une condition de cas du nom de l'âge et du métier, en sortie on aurait que le nom et l'age parce que ça rentrerait dans cette condition sans tester le métier, c'est une des limites du match case
+'''
