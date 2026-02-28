@@ -1,7 +1,7 @@
 #Nouveauté de Python
 #Union de dictionnaire
 
-dict1 = {"Jean":(20,"dévéloppeur"),"Mark":(45,"Architecte")}
+'''dict1 = {"Jean":(20,"dévéloppeur"),"Mark":(45,"Architecte")}
 dict2 = {"Emilie":(35,"danseuse"),"Jenifer":(18,"étudiante en psychologie criminelle")}
 
 dict1.update(dict2) #<- la fonction update ici permet d'agreger le contenu d'un dictionnaire à un jour qui est mis à jour
@@ -13,7 +13,7 @@ print (repectoire_complet)
 
 phrase = "Emilie a mangé un gateau"
 print(phrase.removeprefix("Emilie"))
-print(phrase.removesuffix("gateau"))
+print(phrase.removesuffix("gateau"))'''
 '''
 removeprefix ou removesuffix permettent de retirer des mots au début ou à la fin d'une phrase dans une chaîne de caractères
 '''
@@ -35,7 +35,7 @@ removeprefix ou removesuffix permettent de retirer des mots au début ou à la f
     else:
         print("Je n'ai pas compris")'''
 # le match case fonctionne de la même façon que le elseif et est utilisé lorsqu'on un nombre important de conditions à faire sur une même donnée
-while True:
+'''while True:
     phrase = input("Parlez-moi : ")
     match phrase:
         case "Bonjour" | "Hello" | "salut" :
@@ -46,4 +46,8 @@ while True:
             print("Au revoir")
             break
         case _: #<- le underscore ici représente le "Else de la condition if précédente, et englobe donc tous les autres cas"
-            print("Je n'ai pas compris")
+            print("Je n'ai pas compris")'''
+
+#Nouvel exemple
+personne1 = {"nom":"Paul","infos":(20,"Ingénieur")}
+personne2 = {"nom" : "Marc", "age" : 30} #Ici on a donc deux données qu'on imagine issue d'une base de données contenant certaines données similaires mais stucturés différemment
