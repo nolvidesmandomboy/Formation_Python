@@ -36,12 +36,12 @@ removeprefix ou removesuffix permettent de retirer des mots au début ou à la f
         print("Je n'ai pas compris")'''
 
 while True:
-    phrase = input("parlez-moi")
+    phrase = input("Parlez-moi : ")
     match phrase:
         case "Bonjour" | "Hello" | "salut" :
-            print("Bonjour comment allez-vous ?")
+            print("Bonjour comment allez-vous ? ")
         case "bien" | "ça va ?":
-            print("Je viens bien et vous ?")
+            print("Je viens bien et vous ? ")
         case "bye":
             print("Au revoir")
             break
