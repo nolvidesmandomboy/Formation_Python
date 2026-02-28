@@ -34,7 +34,7 @@ removeprefix ou removesuffix permettent de retirer des mots au début ou à la f
         break
     else:
         print("Je n'ai pas compris")'''
-
+# le match case fonctionne de la même façon que le elseif et est utilisé lorsqu'on un nombre important de conditions à faire sur une même donnée
 while True:
     phrase = input("Parlez-moi : ")
     match phrase:
