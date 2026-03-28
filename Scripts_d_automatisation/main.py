@@ -10,3 +10,5 @@ Il faut faire aussi attention à ce que dans le terminal le chement soit le mêm
 f.write("Salut c'est Ninho ! X)")
 
 f.close()
+
+#Le fichier write doit bien être mis avant le close, c'est pas possible de modifier le fichier une fois que c'est fermer.
