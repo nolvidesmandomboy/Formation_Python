@@ -27,3 +27,11 @@ fichier = open ("nombres.txt", "w")
 fichier.writelines (l)
 
 fichier.close()'''
+
+#Lire un fichier texte
+f = open("Mon_fichier.txt", "r")
+
+texte = f.read() #<- permet de lire l'intégralité du fichier, on peut aussi spécifier le nombre de caractères à lire dans le fichier directement dans les parenthèses 
+print(texte) 
+
+f.close()
