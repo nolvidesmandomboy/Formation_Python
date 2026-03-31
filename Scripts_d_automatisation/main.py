@@ -37,10 +37,10 @@ print(texte)
 f.close()'''
 
 #Gestion des erreurs 
-try :
+'''try :
     f = open("Mon_fichierss.txt", "r")
 except FileNotFoundError :
     print("ERREUR, le fichier n'a pas été trouvé")
 else:
     lecture = f.read()
-    f.close()
+    f.close()'''
