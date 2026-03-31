@@ -44,10 +44,10 @@ except FileNotFoundError :
     print("ERREUR, le fichier n'a pas été trouvé")
 else:
     lecture = f.read()
-    f.close()'''
+    f.close()
 
 filenam = "Mon_fichier.txt"
 if os.path.exists(filenam):
     print ("le fichier existe")
 else :
-    print("le fichier n'existe pas")
+    print("le fichier n'existe pas")'''
