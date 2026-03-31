@@ -1,4 +1,5 @@
 #Fichier Texte
+import os.path
 
 #Sur Python, on peut ouvrir, éditer, sauvegarder et fermer un fichier.
 
@@ -44,3 +45,9 @@ except FileNotFoundError :
 else:
     lecture = f.read()
     f.close()'''
+
+filenam = "Mon_fichier.txt"
+if os.path.exists(filenam):
+    print ("le fichier existe")
+else :
+    print("le fichier n'existe pas")
