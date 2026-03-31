@@ -15,7 +15,7 @@ Il faut faire aussi attention à ce que dans le terminal le chement soit le mêm
 
 #Exercice 1
 
-l = []
+'''l = []
 
 for i in range (0,10) :
     l.append(f"{str(i+1)}\n")
@@ -26,4 +26,4 @@ fichier = open ("nombres.txt", "w")
 
 fichier.writelines (l)
 
-fichier.close()
+fichier.close()'''
