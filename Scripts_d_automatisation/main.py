@@ -52,6 +52,8 @@ if os.path.exists(filenam):
 else :
     print("le fichier n'existe pas")'''
 
-#Mettre automatiquement le bon "/" dans le chemin des fichier 
+#Mettre automatiquement le bon "/" dans le chemin des fichier, suppression et ajout de dossier 
 filname = os.path.join ("dossier1", "Mon_fichier.txt") # vu que le slash est différent sur windows, mac ou Linux, le os.path.join permets de faire ça automatiquement
 print ("Filename : ", filname)
+os.path.mkdir("") #<- permet de créer un dossier 
+os.path.rmdiv("") #<- prmet de supprimer un dossier 
