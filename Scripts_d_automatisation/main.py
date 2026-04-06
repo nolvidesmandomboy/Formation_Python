@@ -71,9 +71,9 @@ j.writelines(personne_json)
 j.close()'''
 
 #convertir un JSON en texte (dictionnaire)
-e = open ("fichier_prsonne_json","r")
+'''e = open ("fichier_prsonne_json","r")
 donnees_json = e.read()
 personne = json.loads(donnees_json) #permet de convertir le JSON en chaîne de caractère (dictionnaire)
 e.close()
 
-print (personne["prenom"])
+print (personne["prenom"])'''
