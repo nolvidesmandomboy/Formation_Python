@@ -1,6 +1,7 @@
 #Fichier Texte
 import os.path
 import json
+import sqlite3
 
 #Sur Python, on peut ouvrir, éditer, sauvegarder et fermer un fichier.
 
@@ -110,3 +111,28 @@ CREATE TABLE album (
 INSERT INTO artiste (nom) VALUES ("Michael Jackson")
 INSERT INTO album (titre, annee_sortie) VALUES ("Thriller", 1982)
 '''
+
+#SQLite : création de la table
+
+#Etapes :
+'''
+1. connexion : "albums.db"
+2. executer / curseur (c'est un objet intermédiaire pour accéder à la base de données)
+3. commit pour s'assurer que tout est bien enregistrer 
+4.fermer
+''' 
+
+connexion = sqlite3.connect("album2.db")
+requete_creer_tabla_artiste = """
+CREATE TABLE artiste (
+    nom VARCHAR, 
+    artiste_id INTEGER NOT NULL PRIMARY KEY, 
+    album_id INTEGER)
+"""
+curseur = connexion.cursor() #<- c'est mieux de faire comme ça plutôt que de directement executer la requte sur la connexion car ça créera à chaqu fois un nouveau curseur, autant créer un seul qu'on va réutiliser.
+#curseur.execute(requete_creer_tabla_artiste) 
+curseur.execute("""
+INSERT INTO album (titre, annee_sortie, artiste_id) VALUES ("Polaroid Experience", 2018, 2) 
+""")
+connexion.commit()
+connexion.close()
