@@ -77,3 +77,36 @@ personne = json.loads(donnees_json) #permet de convertir le JSON en chaîne de c
 e.close()
 
 print (personne["prenom"])'''
+
+#Bases de données : langage SQL 
+
+'''
+Création de tables : exemples d'artiste et d'album
+
+artiste
+- nom
+- artiste_id
+- album_id
+
+album
+- album_id
+- artiste_id
+- titre
+- date de sortie
+
+Pour créer les tabls en question: 
+
+CREATE TABLE artiste (
+    nom VARCHAR, 
+    artiste_id INTEGER NOT NULL PRIMARY KEY, 
+    album_id INTEGER)
+
+CREATE TABLE album (
+    album_id INTEGER NOT NULL PRIMARY KEY, 
+    artiste_id INTEGER REFERENCES artiste, 
+    titre VARCHAR,
+    annee_sortie INTEGER)
+
+INSERT INTO artiste (nom) VALUES ("Michael Jackson")
+INSERT INTO album (titre, annee_sortie) VALUES ("Thriller", 1982)
+'''
