@@ -132,7 +132,9 @@ CREATE TABLE artiste (
 curseur = connexion.cursor() #<- c'est mieux de faire comme ça plutôt que de directement executer la requte sur la connexion car ça créera à chaqu fois un nouveau curseur, autant créer un seul qu'on va réutiliser.
 #curseur.execute(requete_creer_tabla_artiste) 
 curseur.execute("""
-INSERT INTO album (titre, annee_sortie, artiste_id) VALUES ("Polaroid Experience", 2018, 2) 
+INSERT INTO artiste (nom) VALUES ("Michael Jackson")
 """)
+mj_id = curseur.lastrowid # <- permet de directement récuperer l'ID du curseur précédent (attention, change à chaque curseur)
+curseur.execute('INSERT INTO album (artiste_id, titre, annee_sortie) VALUES (' + str(mj_id) + ', "Thriller", 1982)')
 connexion.commit()
 connexion.close()
