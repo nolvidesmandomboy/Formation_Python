@@ -1,5 +1,6 @@
 #Fichier Texte
 import os.path
+import json
 
 #Sur Python, on peut ouvrir, éditer, sauvegarder et fermer un fichier.
 
@@ -57,3 +58,22 @@ else :
 print ("Filename : ", filname)
 os.path.mkdir("") #<- permet de créer un dossier 
 os.path.rmdiv("") #<- prmet de supprimer un dossier'''
+
+#Convertir un texte en JSON (sérialiser)
+'''personne1 = {"age":30,
+             "prenom":"Lucas",
+             "travail":"géologue", 
+             "patrimoine":100000}
+
+personne_json = json.dumps(personne1) # Permet de convertir un dictionnaire en chaîne de caractères JSON.
+j = open("fichier_prsonne_json","w")
+j.writelines(personne_json)
+j.close()'''
+
+#convertir un JSON en texte (dictionnaire)
+e = open ("fichier_prsonne_json","r")
+donnees_json = e.read()
+personne = json.loads(donnees_json) #permet de convertir le JSON en chaîne de caractère (dictionnaire)
+e.close()
+
+print (personne["prenom"])
