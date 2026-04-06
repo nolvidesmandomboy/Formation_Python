@@ -1,5 +1,7 @@
 #Fichier Texte
 import os.path
+import json
+import sqlite3
 
 #Sur Python, on peut ouvrir, éditer, sauvegarder et fermer un fichier.
 
@@ -53,7 +55,84 @@ else :
     print("le fichier n'existe pas")'''
 
 #Mettre automatiquement le bon "/" dans le chemin des fichier, suppression et ajout de dossier 
-filname = os.path.join ("dossier1", "Mon_fichier.txt") # vu que le slash est différent sur windows, mac ou Linux, le os.path.join permets de faire ça automatiquement
+'''filname = os.path.join ("dossier1", "Mon_fichier.txt") # vu que le slash est différent sur windows, mac ou Linux, le os.path.join permets de faire ça automatiquement
 print ("Filename : ", filname)
 os.path.mkdir("") #<- permet de créer un dossier 
-os.path.rmdiv("") #<- prmet de supprimer un dossier 
+os.path.rmdiv("") #<- prmet de supprimer un dossier'''
+
+#Convertir un texte en JSON (sérialiser)
+'''personne1 = {"age":30,
+             "prenom":"Lucas",
+             "travail":"géologue", 
+             "patrimoine":100000}
+
+personne_json = json.dumps(personne1) # Permet de convertir un dictionnaire en chaîne de caractères JSON.
+j = open("fichier_prsonne_json","w")
+j.writelines(personne_json)
+j.close()'''
+
+#convertir un JSON en texte (dictionnaire)
+'''e = open ("fichier_prsonne_json","r")
+donnees_json = e.read()
+personne = json.loads(donnees_json) #permet de convertir le JSON en chaîne de caractère (dictionnaire)
+e.close()
+
+print (personne["prenom"])'''
+
+#Bases de données : langage SQL 
+
+'''
+Création de tables : exemples d'artiste et d'album
+
+artiste
+- nom
+- artiste_id
+- album_id
+
+album
+- album_id
+- artiste_id
+- titre
+- date de sortie
+
+Pour créer les tabls en question: 
+
+CREATE TABLE artiste (
+    nom VARCHAR, 
+    artiste_id INTEGER NOT NULL PRIMARY KEY, 
+    album_id INTEGER)
+
+CREATE TABLE album (
+    album_id INTEGER NOT NULL PRIMARY KEY, 
+    artiste_id INTEGER REFERENCES artiste, 
+    titre VARCHAR,
+    annee_sortie INTEGER)
+
+INSERT INTO artiste (nom) VALUES ("Michael Jackson")
+INSERT INTO album (titre, annee_sortie) VALUES ("Thriller", 1982)
+'''
+
+#SQLite : création de la table
+
+#Etapes :
+'''
+1. connexion : "albums.db"
+2. executer / curseur (c'est un objet intermédiaire pour accéder à la base de données)
+3. commit pour s'assurer que tout est bien enregistrer 
+4.fermer
+''' 
+
+connexion = sqlite3.connect("album2.db")
+requete_creer_tabla_artiste = """
+CREATE TABLE artiste (
+    nom VARCHAR, 
+    artiste_id INTEGER NOT NULL PRIMARY KEY, 
+    album_id INTEGER)
+"""
+curseur = connexion.cursor() #<- c'est mieux de faire comme ça plutôt que de directement executer la requte sur la connexion car ça créera à chaqu fois un nouveau curseur, autant créer un seul qu'on va réutiliser.
+#curseur.execute(requete_creer_tabla_artiste) 
+curseur.execute("""
+INSERT INTO album (titre, annee_sortie, artiste_id) VALUES ("Polaroid Experience", 2018, 2) 
+""")
+connexion.commit()
+connexion.close()
