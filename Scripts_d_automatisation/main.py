@@ -122,18 +122,27 @@ INSERT INTO album (titre, annee_sortie) VALUES ("Thriller", 1982)
 4.fermer
 ''' 
 
-connexion = sqlite3.connect("album2.db")
-requete_creer_tabla_artiste = """
-CREATE TABLE artiste (
-    nom VARCHAR, 
-    artiste_id INTEGER NOT NULL PRIMARY KEY, 
-    album_id INTEGER)
-"""
+'''connexion = sqlite3.connect("album2.db")
+
 curseur = connexion.cursor() #<- c'est mieux de faire comme ça plutôt que de directement executer la requte sur la connexion car ça créera à chaqu fois un nouveau curseur, autant créer un seul qu'on va réutiliser.
 #curseur.execute(requete_creer_tabla_artiste) 
 curseur.execute("""
 INSERT INTO artiste (nom) VALUES ("Michael Jackson")
-""")
+""") #<- c'est ici qu'on mets toutes les requêtes
+mj_id = curseur.lastrowid # <- permet de directement récuperer l'ID du curseur précédent (attention, change à chaque curseur)
+curseur.execute('INSERT INTO album (artiste_id, titre, annee_sortie) VALUES (' + str(mj_id) + ', "Thriller", 1982)')
+connexion.commit()
+connexion.close()'''
+
+#Lecture de base de données
+
+connexion = sqlite3.connect("album2.db")
+
+curseur = connexion.cursor() #<- c'est mieux de faire comme ça plutôt que de directement executer la requte sur la connexion car ça créera à chaqu fois un nouveau curseur, autant créer un seul qu'on va réutiliser.
+#curseur.execute(requete_creer_tabla_artiste) 
+curseur.execute("""
+INSERT INTO artiste (nom) VALUES ("Michael Jackson")
+""") #<- c'est ici qu'on mets toutes les requêtes
 mj_id = curseur.lastrowid # <- permet de directement récuperer l'ID du curseur précédent (attention, change à chaque curseur)
 curseur.execute('INSERT INTO album (artiste_id, titre, annee_sortie) VALUES (' + str(mj_id) + ', "Thriller", 1982)')
 connexion.commit()
