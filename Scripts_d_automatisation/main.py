@@ -142,5 +142,7 @@ curseur = connexion.cursor()
 curseur.execute("""
 SELECT * FROM artiste
 """)  
+listedartistes = curseur.fetchall() #<- permet de récuperer le résultat dans une variable, par contre faut que la base de données soit dans le même dossier que le code
+print (listedartistes)
 connexion.commit()
 connexion.close()
