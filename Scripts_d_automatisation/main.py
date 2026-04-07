@@ -136,14 +136,19 @@ connexion.close()'''
 
 #Lecture de base de données
 
-connexion = sqlite3.connect("album2.db")
+'''connexion = sqlite3.connect("album2.db")
 
 curseur = connexion.cursor() 
 pnl = curseur.execute("""
 SELECT titre, nom FROM artiste as ar JOIN album as al ON ar.nom = "PNL" AND al.artiste_id = 1 
 """).fetchall()
 print(pnl)
+curseur.execute("""
+SELECT * FROM artiste
+""")
 # listedartistes = curseur.fetchall() #<- permet de récuperer le résultat dans une variable, par contre faut que la base de données soit dans le même dossier que le code
 # print (listedartistes)
 connexion.commit()
-connexion.close()
+connexion.close()'''
+
+#Fichiers PDF 
