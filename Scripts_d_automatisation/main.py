@@ -152,3 +152,11 @@ connexion.commit()
 connexion.close()'''
 
 #Fichiers PDF 
+"""
+Avec la bibliothèque PyPDF2 on peut : 
+
+- Combiner des PDF 
+- superposer des pages, faire une rotation
+- On ne peut pas rajouter du texte ou des images
+"""
+#Combiner des fichiers PDF 
