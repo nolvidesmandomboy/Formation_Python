@@ -160,3 +160,6 @@ Avec la bibliothèque PyPDF2 on peut :
 - On ne peut pas rajouter du texte ou des images
 """
 #Combiner des fichiers PDF 
+#Ne marche pas, on passe au cours suivant
+
+#Excel
