@@ -2,6 +2,7 @@
 import os.path
 import json
 import sqlite3
+import openpyxl
 
 #Sur Python, on peut ouvrir, éditer, sauvegarder et fermer un fichier.
 
@@ -163,3 +164,9 @@ Avec la bibliothèque PyPDF2 on peut :
 #Ne marche pas, on passe au cours suivant
 
 #Excel
+
+wb = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx")  #-> permet de charger le fichier excel
+print(wb.sheetnames) # <- affiche les noms de tous les feuilles du fichier excel
+sheet = wb['Feuil1'] # <- permett de récuperer une feuille du fichier
+#cell = sheet["A1"] #<- récupère la celulle de la feuille du fichier
+cell = sheet.cell(4,3) #<- permet d'accéder à des donnés du fichier excel grâce aux coordonnées lignes/colonnes
