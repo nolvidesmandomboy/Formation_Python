@@ -176,14 +176,23 @@ cell = sheet.cell(4,3) #<- permet d'accéder à des donnés du fichier excel gr�
 wb1 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx",data_only=True) #<- le data only ici permet de récupérer uniquement les données même lorsque q'un calcul est effectué et non la formule. 
 wb2 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\novembre.xlsx",data_only=True)
 wb3 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\decembre.xlsx",data_only=True)
-
 sheet1 = wb1['Feuil1']
+def ajouter_data (wb, d):
+    sheet = wb['Feuil1']
+    for row in range (2,sheet.max_row):
+        nom_articles = sheet.cell(row,1).value
+        if not nom_articles:
+            break
+        print (nom_articles) #<- boucle pour récupérer toutes les valeurs d'une cellule (ici la liste des articles)
+        total_ventes =  sheet.cell(row,4).value
+        if d.get(nom_articles):
+            d[nom_articles].append(total_ventes)
+        else :
+            d[nom_articles] = [total_ventes]
+
 donnees = {}
-for row in range (2,sheet1.max_row):
-    nom_articles = sheet1.cell(row,1).value
-    if not nom_articles:
-        break
-    print (nom_articles) #<- boucle pour récupérer toutes les valeurs d'une cellule (ici la liste des articles)
-    total_ventes =  sheet1.cell(row,4).value
-    donnees[nom_articles] = total_ventes
+ajouter_data(wb1,donnees)
+ajouter_data(wb2,donnees)
+ajouter_data(wb3,donnees)
+
 print(donnees)
