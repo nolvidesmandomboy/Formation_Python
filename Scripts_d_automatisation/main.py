@@ -173,11 +173,17 @@ cell = sheet.cell(4,3) #<- permet d'accéder à des donnés du fichier excel gr�
 '''
 
 #Lire les données de plusieurs fichiers Excel
-wb1 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx")  
-wb2 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\novembre.xlsx")
-wb3 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\decembre.xlsx")
+wb1 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx",data_only=True) #<- le data only ici permet de récupérer uniquement les données même lorsque q'un calcul est effectué et non la formule. 
+wb2 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\novembre.xlsx",data_only=True)
+wb3 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\decembre.xlsx",data_only=True)
 
 sheet1 = wb1['Feuil1']
-
+donnees = {}
 for row in range (2,sheet1.max_row):
-    print (sheet1.cell(row,1).value) #<- boucle pour récupérer toutes les valeurs d'une cellule (ici la liste des articles)
+    nom_articles = sheet1.cell(row,1).value
+    if not nom_articles:
+        break
+    print (nom_articles) #<- boucle pour récupérer toutes les valeurs d'une cellule (ici la liste des articles)
+    total_ventes =  sheet1.cell(row,4).value
+    donnees[nom_articles] = total_ventes
+print(donnees)
