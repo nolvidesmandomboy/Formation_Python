@@ -165,8 +165,19 @@ Avec la bibliothèque PyPDF2 on peut :
 
 #Excel
 
-wb = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx")  #-> permet de charger le fichier excel
+'''wb = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx")  #-> permet de charger le fichier excel
 print(wb.sheetnames) # <- affiche les noms de tous les feuilles du fichier excel
 sheet = wb['Feuil1'] # <- permett de récuperer une feuille du fichier
 #cell = sheet["A1"] #<- récupère la celulle de la feuille du fichier
 cell = sheet.cell(4,3) #<- permet d'accéder à des donnés du fichier excel grâce aux coordonnées lignes/colonnes
+'''
+
+#Lire les données de plusieurs fichiers Excel
+wb1 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx")  
+wb2 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\novembre.xlsx")
+wb3 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\decembre.xlsx")
+
+sheet1 = wb1['Feuil1']
+
+for row in range (2,sheet1.max_row):
+    print (sheet1.cell(row,1).value) #<- boucle pour récupérer toutes les valeurs d'une cellule (ici la liste des articles)
