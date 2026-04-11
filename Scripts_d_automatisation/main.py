@@ -173,7 +173,7 @@ cell = sheet.cell(4,3) #<- permet d'accéder à des donnés du fichier excel gr�
 '''
 
 #Lire les données de plusieurs fichiers Excel
-wb1 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx",data_only=True) #<- le data only ici permet de récupérer uniquement les données même lorsque q'un calcul est effectué et non la formule. 
+"""wb1 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx",data_only=True) #<- le data only ici permet de récupérer uniquement les données même lorsque q'un calcul est effectué et non la formule. 
 wb2 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\novembre.xlsx",data_only=True)
 wb3 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\decembre.xlsx",data_only=True)
 sheet1 = wb1['Feuil1']
@@ -195,11 +195,11 @@ ajouter_data(wb1,donnees)
 ajouter_data(wb2,donnees)
 ajouter_data(wb3,donnees)
 
-print(donnees)
+print(donnees)"""
 
 #Créer un nouveau fichier Excel
 
-wb_sortie = openpyxl.Workbook() #permet de créer un nouveau fichier Excel
+"""wb_sortie = openpyxl.Workbook() #permet de créer un nouveau fichier Excel
 sheet_sortie = wb_sortie.active #permet de créer une feuille qui va être celle sur laquelle on va travailler 
 
 def creer_colonne_ou_ligne (colonne_ou_row, valeur):
@@ -214,26 +214,26 @@ valeur1 = ["Articles","Octobre","Novembre","Décembre"]
 # valeur2 = ["Pommes","Poire","banane", "mangue","Ananas"]
 
 creer_colonne_ou_ligne(colonnes,valeur1)
-# creer_colonne_ou_ligne(row, valeur2)
+# creer_colonne_ou_ligne(row, valeur2)"""
 
 #méthode de jonhathan
-row=2
+"""row=2
 for i in donnees.items():
     nom_articles = i[0] #permet de récupérer les noms d'articles 
     ventes = i[1] #permet de récupérer les ventes
     sheet_sortie.cell(row,1).value = nom_articles #permet de mettre à jour les cellules
     for j in range (0,len(ventes)):
         sheet_sortie.cell(row,2+j).value = ventes[j]
-    row+=1
+    row+=1"""
 #Créer un graphique 
 
-chart_rf = openpyxl.chart.Reference(sheet_sortie, min_col =2,min_row=2,max_col=sheet_sortie.max_column,max_row=2) # Permet de donner ce qui va nous servir de référence dans nos données pour construire notre graphique
+"""chart_rf = openpyxl.chart.Reference(sheet_sortie, min_col =2,min_row=2,max_col=sheet_sortie.max_column,max_row=2) # Permet de donner ce qui va nous servir de référence dans nos données pour construire notre graphique
 chart_serie = openpyxl.chart.Series(chart_rf,title="Total vente en Euro")
 chart = openpyxl.chart.BarChart() #Permet de générer le graphique
 chart.title = "Evolution du prix des pommes"
 chart.append(chart_serie)
 
 sheet_sortie.add_chart(chart,"F2") #Rajout le graphique dans notr feuille
-wb_sortie.save("total_vente_trismestre.xlsx")
+wb_sortie.save("total_vente_trismestre.xlsx")"""
 
 
