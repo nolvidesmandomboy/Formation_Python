@@ -210,11 +210,21 @@ def creer_colonne_ou_ligne (colonne_ou_row, valeur):
 colonnes = ["A1","B1","C1","D1"]
 valeur1 = ["Articles","Octobre","Novembre","Décembre"]
 
-row = ["A2","A3","A4","A5"]
-valeur2 = ["Pommes","Poire","banane", "mangue","Ananas"]
+# row = ["A2","A3","A4","A5"]
+# valeur2 = ["Pommes","Poire","banane", "mangue","Ananas"]
 
 creer_colonne_ou_ligne(colonnes,valeur1)
-creer_colonne_ou_ligne(row, valeur2)
+# creer_colonne_ou_ligne(row, valeur2)
+
+#méthode de jonhathan
+row=2
+for i in donnees.items():
+    nom_articles = i[0] #permet de récupérer les noms d'articles 
+    ventes = i[1] #permet de récupérer les ventes
+    sheet_sortie.cell(row,1).value = nom_articles #permet de mettre à jour les cellules
+    for j in range (0,len(ventes)):
+        sheet_sortie.cell(row,2+j).value = ventes[j]
+    row+=1
 
 wb_sortie.save("total_vente_trismestre.xlsx")
 
