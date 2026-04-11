@@ -201,17 +201,20 @@ print(donnees)"""
 
 wb_sortie = openpyxl.Workbook() #permet de créer un nouveau fichier Excel
 sheet_sortie = wb_sortie.active #permet de créer une feuille qui va être celle sur laquelle on va travailler 
-colonnes = ["A1","B1","C1","D1"]
-valeur = ["Articles","Octobre","Novembre","Décembre"]
-for i in range (0, len(colonnes)) :
-    # print(colonnes[i])
-    # print(valeur[i])
-    sheet_sortie[colonnes[i]] = valeur[i]
 
-colonnes = ["A2","A3","A4","A5"]
-valeur = ["Pommes","dentifrice","manga berserk","Puce de téléphone"]
-for i in range (0, len(colonnes)) :
-    sheet_sortie[colonnes[i]] = valeur[i]
+def creer_colonne_ou_ligne (colonne_ou_row, valeur):
+    for i in range (0, len(colonne_ou_row)) :
+        sheet_sortie[colonne_ou_row[i]] = valeur[i]
+
+
+colonnes = ["A1","B1","C1","D1"]
+valeur1 = ["Articles","Octobre","Novembre","Décembre"]
+
+row = ["A2","A3","A4","A5"]
+valeur2 = ["Pommes","dentifrice","manga berserk","Puce de téléphone"]
+
+creer_colonne_ou_ligne(colonnes,valeur1)
+creer_colonne_ou_ligne(row, valeur2)
 
 wb_sortie.save("total_vente_trismestre.xlsx")
 
