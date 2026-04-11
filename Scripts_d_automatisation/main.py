@@ -225,6 +225,15 @@ for i in donnees.items():
     for j in range (0,len(ventes)):
         sheet_sortie.cell(row,2+j).value = ventes[j]
     row+=1
+#Créer un graphique 
 
+chart_rf = openpyxl.chart.Reference(sheet_sortie, min_col =2,min_rox=2,max_col=sheet_sortie.max_column,max_row=2) # Permet de donner ce qui va nous servir de référence dans nos données pour construire notre graphique
+chart_serie = openpyxl.chart.Series(chart_rf,title="Total vente en Euro")
+chart = openpyxl.chart.BarChart #Permet de générer le graphique
+chart.title = "Evolution du prix des pommes"
+chart.append(chart_serie)
+
+sheet_sortie.add_chart(chart_serie,"F2") #Rajout le graphique dans notr feuille
 wb_sortie.save("total_vente_trismestre.xlsx")
+
 
