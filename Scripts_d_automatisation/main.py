@@ -211,7 +211,7 @@ colonnes = ["A1","B1","C1","D1"]
 valeur1 = ["Articles","Octobre","Novembre","Décembre"]
 
 row = ["A2","A3","A4","A5"]
-valeur2 = ["Pommes","Poire","bannane", "mangue","Ananas"]
+valeur2 = ["Pommes","Poire","banane", "mangue","Ananas"]
 
 creer_colonne_ou_ligne(colonnes,valeur1)
 creer_colonne_ou_ligne(row, valeur2)
