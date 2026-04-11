@@ -208,5 +208,10 @@ for i in range (0, len(colonnes)) :
     # print(valeur[i])
     sheet_sortie[colonnes[i]] = valeur[i]
 
+colonnes = ["A2","A3","A4","A5"]
+valeur = ["Pommes","dentifrice","manga berserk","Puce de téléphone"]
+for i in range (0, len(colonnes)) :
+    sheet_sortie[colonnes[i]] = valeur[i]
+
 wb_sortie.save("total_vente_trismestre.xlsx")
 
