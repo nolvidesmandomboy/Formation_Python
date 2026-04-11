@@ -196,3 +196,11 @@ ajouter_data(wb2,donnees)
 ajouter_data(wb3,donnees)
 
 print(donnees)
+
+#Créer un nouveau fichier Excel
+
+wb_sortie = openpyxl.Workbook() #permet de créer un nouveau fichier Excel
+sheet_sortie = wb_sortie.active #permet de créer une feuille qui va être celle sur laquelle on va travailler 
+sheet_sortie['A1'] = "Article"
+wb_sortie.save("total_vente_trismestre.xlsx")
+
