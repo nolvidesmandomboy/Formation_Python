@@ -173,7 +173,7 @@ cell = sheet.cell(4,3) #<- permet d'accéder à des donnés du fichier excel gr�
 '''
 
 #Lire les données de plusieurs fichiers Excel
-"""wb1 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx",data_only=True) #<- le data only ici permet de récupérer uniquement les données même lorsque q'un calcul est effectué et non la formule. 
+wb1 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\octobre.xlsx",data_only=True) #<- le data only ici permet de récupérer uniquement les données même lorsque q'un calcul est effectué et non la formule. 
 wb2 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\novembre.xlsx",data_only=True)
 wb3 = openpyxl.load_workbook("C:\\Formation_Python\\Scripts_d_automatisation\\decembre.xlsx",data_only=True)
 sheet1 = wb1['Feuil1']
@@ -195,7 +195,7 @@ ajouter_data(wb1,donnees)
 ajouter_data(wb2,donnees)
 ajouter_data(wb3,donnees)
 
-print(donnees)"""
+print(donnees)
 
 #Créer un nouveau fichier Excel
 
@@ -211,7 +211,7 @@ colonnes = ["A1","B1","C1","D1"]
 valeur1 = ["Articles","Octobre","Novembre","Décembre"]
 
 row = ["A2","A3","A4","A5"]
-valeur2 = ["Pommes","dentifrice","manga berserk","Puce de téléphone"]
+valeur2 = ["Pommes","Poire","bannane" "mangue","Ananas"]
 
 creer_colonne_ou_ligne(colonnes,valeur1)
 creer_colonne_ou_ligne(row, valeur2)
