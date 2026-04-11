@@ -201,6 +201,12 @@ print(donnees)
 
 wb_sortie = openpyxl.Workbook() #permet de créer un nouveau fichier Excel
 sheet_sortie = wb_sortie.active #permet de créer une feuille qui va être celle sur laquelle on va travailler 
-sheet_sortie['A1'] = "Article"
+colonnes = ["A1","B1","C1","D1"]
+valeur = ["Articles","Octobre","Novembre","Décembre"]
+for i in range (0, len(colonnes)) :
+    # print(colonnes[i])
+    # print(valeur[i])
+    sheet_sortie[colonnes[i]] = valeur[i]
+
 wb_sortie.save("total_vente_trismestre.xlsx")
 
