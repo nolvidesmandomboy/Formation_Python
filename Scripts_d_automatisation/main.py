@@ -240,7 +240,7 @@ sheet_sortie.add_chart(chart,"F2") #Rajout le graphique dans notr feuille
 wb_sortie.save("total_vente_trismestre.xlsx")"""
 
 #Envoyer des mail 
-config_email = "xxxx@gmail.com"
+"""config_email = "xxxx@gmail.com"
 config_password = "xxxxx"
 config_server = "smtp.gmail.com"
 config_server_port = 587
@@ -259,9 +259,10 @@ def envoyer_mail (mail_destinataire,message, sujet):
     serveur_mail.sendmail(config_email,mail_destinataire,multipart_message.as_string())
     serveur_mail.quit()
 
-message_email = """
+message_email = '''
 Bonjour bg je t'envoie ce message depuis python
-"""
+'''
 
-envoyer_mail("xxxx@gmail.com", message_email, "Email depuis python")
+envoyer_mail("xxxx@gmail.com", message_email, "Email depuis python")"""
 
+#Faire des appels réseaux
