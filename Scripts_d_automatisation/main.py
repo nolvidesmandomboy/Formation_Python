@@ -3,6 +3,7 @@ import os.path
 import json
 import sqlite3
 import openpyxl
+import smtplib #<- bibliothèque qui permet d'envoyer des emails avec pythons
 
 #Sur Python, on peut ouvrir, éditer, sauvegarder et fermer un fichier.
 
@@ -242,8 +243,11 @@ config_password = "..."
 config_server = "smtp.gmail.com"
 config_server_port = 587
 
-
-
-
+def envoyer_mail (mail_destinataire,message):
+    serveur_mail = smtplib.SMTP (config_server, config_server_port)
+    serveur_mail.starttls()
+    serveur_mail.login(config_email,config_password)
+    serveur_mail.sendmail(config_email,mail_destinataire,message)
+    serveur_mail.quit()
 
 
