@@ -240,8 +240,8 @@ sheet_sortie.add_chart(chart,"F2") #Rajout le graphique dans notr feuille
 wb_sortie.save("total_vente_trismestre.xlsx")"""
 
 #Envoyer des mail 
-config_email = "xxxx"
-config_password = "xxxx"
+config_email = "xxxx@gmail.com"
+config_password = "xxxxx"
 config_server = "smtp.gmail.com"
 config_server_port = 587
 
@@ -251,14 +251,17 @@ def envoyer_mail (mail_destinataire,message, sujet):
     multipart_message["Subject"] = sujet
     multipart_message["From"] = config_email
     multipart_message["To"] = mail_destinataire
-    multipart_message.attach(MIMEText(message,  "plain"))
+    multipart_message.attach(MIMEText(message,  "plain")) #le Plain ici permet d'ajouter un message sous format texte, on pourrait le mettre sous format html plutôt par exemple
 
     serveur_mail = smtplib.SMTP (config_server, config_server_port)
     serveur_mail.starttls()
     serveur_mail.login(config_email,config_password)
-    serveur_mail.sendmail(config_email,mail_destinataire,message)
-    multipart_message.as_string()
+    serveur_mail.sendmail(config_email,mail_destinataire,multipart_message.as_string())
     serveur_mail.quit()
 
-envoyer_mail("xxxx@gmail.com", "Bonjour jeune bg comment vas-tu", "Email depuis python")
+message_email = """
+Bonjour bg je t'envoie ce message depuis python
+"""
+
+envoyer_mail("xxxx@gmail.com", message_email, "Email depuis python")
 
