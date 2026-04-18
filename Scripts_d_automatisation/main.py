@@ -272,11 +272,21 @@ envoyer_mail("xxxx@gmail.com", message_email, "Email depuis python")"""
 # https://codeavecjonathan.com/res/pizzas1.json
 # https://codeavecjonathan.com/res/exemple.html
 
-reponse = requests.get("https://codeavecjonathan.com/res/programmation.txt")
+"""reponse = requests.get("https://codeavecjonathan.com/res/programmation.txt")
 reponse.encoding = "utf-8" #Permet de bien encoder le texte et gérer les accents par exemple 
 print (reponse.text)
 
 reponse2 = requests.get("https://codeavecjonathan.com/res/pizzas1.json")
 print (reponse2.text)
 pizza = json.loads(reponse2.text)
-print (f"Nombre de pizzas : {len(pizza)}")
+print (f"Nombre de pizzas : {len(pizza)}")"""
+
+#Télécharger une image avec Request
+#https://codeavecjonathan.com/res/papillon.jpg
+
+"""reponseimage = requests.get("https://codeavecjonathan.com/res/papillon.jpg")
+
+f = open ("papillon.jpg","wb") #wb c'est pour faire l'écriture en binaire
+f.write (reponseimage.content) #contrairment à précédemment où c'était des fichiers texte, ici c'st du binaire vu que c'est une image etle .content permet de lire ça
+print("écriture terminée") #Avec ça on sait que l'image sera télécharger dans le même répertoire que notre fichier de code si on est dessus
+f.close()"""
