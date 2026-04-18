@@ -4,6 +4,8 @@ import json
 import sqlite3
 import openpyxl
 import smtplib #<- bibliothèque qui permet d'envoyer des emails avec pythons
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 #Sur Python, on peut ouvrir, éditer, sauvegarder et fermer un fichier.
 
@@ -243,12 +245,20 @@ config_password = "xxxx"
 config_server = "smtp.gmail.com"
 config_server_port = 587
 
-def envoyer_mail (mail_destinataire,message):
+def envoyer_mail (mail_destinataire,message, sujet):
+
+    multipart_message = MIMEMultipart() #Avec ça, dans le mail on va pouvoir mettre plusieurs éléments (contenu texte, contenu HTML etc etc mais aussi confgurer d'autres éléments comme le sujet du message)
+    multipart_message["Subject"] = sujet
+    multipart_message["From"] = config_email
+    multipart_message["To"] = mail_destinataire
+    multipart_message.attach(MIMEText(message,  "plain"))
+
     serveur_mail = smtplib.SMTP (config_server, config_server_port)
     serveur_mail.starttls()
     serveur_mail.login(config_email,config_password)
     serveur_mail.sendmail(config_email,mail_destinataire,message)
+    multipart_message.as_string()
     serveur_mail.quit()
 
-envoyer_mail("xxxx@gmail.com", "Bonjour jeune bg comment vas-tu")
+envoyer_mail("xxxx@gmail.com", "Bonjour jeune bg comment vas-tu", "Email depuis python")
 
