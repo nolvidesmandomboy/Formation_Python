@@ -236,4 +236,14 @@ chart.append(chart_serie)
 sheet_sortie.add_chart(chart,"F2") #Rajout le graphique dans notr feuille
 wb_sortie.save("total_vente_trismestre.xlsx")"""
 
+#Envoyer des mail 
+config_email = "xxxx@gmail.com"
+config_password = "..."
+config_server = "smtp.gmail.com"
+config_server_port = 587
+
+
+
+
+
 
