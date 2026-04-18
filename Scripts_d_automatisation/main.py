@@ -6,6 +6,7 @@ import openpyxl
 import smtplib #<- bibliothèque qui permet d'envoyer des emails avec pythons
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import requests
 
 #Sur Python, on peut ouvrir, éditer, sauvegarder et fermer un fichier.
 
@@ -266,3 +267,16 @@ Bonjour bg je t'envoie ce message depuis python
 envoyer_mail("xxxx@gmail.com", message_email, "Email depuis python")"""
 
 #Faire des appels réseaux
+
+# https://codeavecjonathan.com/res/programmation.txt
+# https://codeavecjonathan.com/res/pizzas1.json
+# https://codeavecjonathan.com/res/exemple.html
+
+reponse = requests.get("https://codeavecjonathan.com/res/programmation.txt")
+reponse.encoding = "utf-8" #Permet de bien encoder le texte et gérer les accents par exemple 
+print (reponse.text)
+
+reponse2 = requests.get("https://codeavecjonathan.com/res/pizzas1.json")
+print (reponse2.text)
+pizza = json.loads(reponse2.text)
+print (f"Nombre de pizzas : {len(pizza)}")
